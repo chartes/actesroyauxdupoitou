@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../diple/xrem/rng_html.xsl"?>
+<rng:grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  >
+  
+    <a:documentation>
+      <h1 id="actesroyauxdupoitou.rng">
+        <a href="http://elec.enc.sorbonne.fr/actesroyauxdupoitou">Actes royaux du Poitou</a>,
+   schéma de balisage</h1>
+    <ul class="auteurs">
+      <li>[FG] Frédéric Glorieux (École nationale des chartes) conception</li>
+      <li>[VJ] Vincent Jolivet (École nationale des chartes) conception</li>
+    </ul>
+    <p>Ce schéma spécifie les particularités d'un corpus TEI des éditions électroniques de l'École des chartes (ELEC) : <i>les actes royaux du Poitou</i>.<br/>
+    Il importe plusieurs autres schémas partagés :
+    </p>
+    <ul>
+      <li><a href="#acte.rng">acte.rng</a> — Les aspects requis pour tout acte ELEC, notamment l'encodage des parties du discours.</li>
+      <li><a href="#texte.rng">texte.rng</a> — Des modèles de contenus réutilisables pour des corpus autres que des chartes.</li>
+      <li><a href="#teiHeader.rng">teiHeader.rng</a> — Entête fixée de contenu pour tout fichier TEI.</li>
+      <li><a href="#date.rng">date.rng</a> — Encodage des dates</li>
+    </ul>
+    <p>Ce schéma spécifie en particulier :</p>
+    <ul>
+      <li><a href="#cartouche">Analyse diplomatique</a> — La définition des métadonnées requises dans le cartouche d'entête.</li>
+      <li><a href="#tenor">Texte de l'acte</a> — La finesse et le type de balisage de l'acte (parties du discours diplomatique, philologie, paléographie...)</li>
+    </ul>
+  </a:documentation>
+
+  <h2 id="tenor">Structure générale d’un acte royal du Poitou (lettres de rémission)</h2>
+  <!-- tpl inscrit dans acte.rng, à surcharger -->
+  <rng:define name="acte" combine="choice">
+    <rng:element name="text">
+      <a:documentation>
+        <p>
+          Pour chaque acte, on inscrit le témoin et le regeste dans le front. La transcription de l'éditeur du XIX<sup>e</sup> figure dans le body.<br/>
+          Tout acte doit obligatoirement être identifié (@xml:id) et paginé (&lt;pb>).
+        </p>
+        <dl>
+          <dt>@xml:id</dt>
+          <dd>L'identifiant reprend en numérotation arabe, la numérotation romaine séquentielle proposée par l'éditeur Paul Guérin.</dd>
+          <dt>&lt;pb></dt>
+          <dd>La page où commence l'acte est d'abord conservée pour résoudre les liens depuis les notes.</dd>
+        </dl>
+      </a:documentation>
+      <rng:ref name="split.atts"/>
+      <rng:ref name="id"/>
+      <rng:attribute name="n"/>
+      <rng:optional>
+        <rng:ref name="pb"/>
+      </rng:optional>
+      <rng:ref name="acte.front"/>
+      <rng:element name="body">
+        <rng:choice>
+          <!-- en cas d'absence de transcription, TEI n'autorise pas de laisser le body vide -->
+          <rng:element name="p">
+            <rng:empty/>
+          </rng:element>
+          <rng:ref name="transcription"/>          
+        </rng:choice>
+      </rng:element>
+    </rng:element>
+  </rng:define>
+
+  <!-- schéma simplifié pour le front par rapport aux cartulaires idf ; comment on partage ? -->
+  <h2 id="cartouche">Analyse diplomatique</h2>
+  <rng:define name="acte.front">
+    <rng:element name="front">
+      <rng:ref name="head"/>
+      <rng:ref name="acte.docDate"/>
+      <rng:ref name="argument"/>
+      <rng:ref name="tradition"/>
+      <rng:ref name="poitou.front.index"/>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="poitou.front.index">
+    <a:documentation>
+      <p>
+        Ce motif nommé surcharge le motif partagé front.index défini dans acte.rng, pour limiter l'indexation des formules par le seul type d'auteur.<br/>
+        Mécanisme identique à Morchesne.
+      </p>
+    </a:documentation>
+    <rng:element name="index">
+      <rng:ref name="auth_type"/>
+      <rng:optional>
+        <rng:element name="term">
+          <rng:attribute name="type">
+            <rng:value>act_type</rng:value>
+          </rng:attribute>
+          <rng:attribute name="key">
+            <rng:choice>
+              <rng:value>absolution</rng:value>
+              <rng:value>analyse</rng:value>
+              <rng:value>amortissement</rng:value>
+              <rng:value>anoblissement</rng:value>
+              <rng:value>assiette</rng:value>
+              <rng:value>commission</rng:value>
+              <rng:value>confirmation</rng:value>
+              <rng:value>don</rng:value>
+              <rng:value>exemption</rng:value>
+              <rng:value>échange</rng:value>
+              <rng:value>franc-fief</rng:value>
+              <rng:value>légitimation</rng:value>
+              <rng:value>liste</rng:value>
+              <rng:value>marché</rng:value>
+              <rng:value>mainlevée</rng:value>
+              <rng:value>nomination</rng:value>
+              <rng:value>pairie</rng:value>
+              <rng:value>pariage</rng:value>
+              <rng:value>permission</rng:value>
+              <rng:value>ordonnance</rng:value>
+              <rng:value>rappel-de-ban</rng:value>
+              <rng:value>ratification</rng:value>
+              <rng:value>rémission</rng:value>
+              <rng:value>ressort</rng:value>
+              <rng:value>sauvegarde</rng:value>
+            </rng:choice>
+          </rng:attribute>
+        </rng:element>
+      </rng:optional>
+    </rng:element>    
+  </rng:define>
+
+  <rng:define name="transcription">
+    <rng:element name="div">
+      <a:documentation>
+        Texte de la transcription d'un acte avec identification de la langue.
+      </a:documentation>
+      <rng:attribute name="type">
+        <rng:value>transcription</rng:value>
+      </rng:attribute>
+      <rng:choice>
+        <rng:empty/> <!-- le regeste n'est pas toujours suivi d'une transcription -->
+        <rng:group>
+          <rng:ref name="lang"/>
+          <rng:oneOrMore>
+            <rng:choice>
+              <rng:ref name="pb"/>
+              <rng:ref name="note"/>
+              <rng:ref name="quote"/>
+              <rng:element name="p">
+                <rng:choice>
+                  <rng:zeroOrMore>
+                    <rng:choice>
+                      <rng:text/>
+                      <rng:ref name="pb"/>
+                      <rng:ref name="note"/>
+                      <!-- pour les vidimus -->
+                      <rng:ref name="quote"/>
+                      <rng:ref name="sic"/>
+                      <rng:ref name="typo"/>
+                      <!-- les dates en petites cap -->
+                      <rng:ref name="num"/>
+                      <rng:element name="lb">
+                        <rng:empty/>
+                      </rng:element>
+                    </rng:choice>
+                  </rng:zeroOrMore>
+                </rng:choice>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="pb"/>
+                    <rng:ref name="note"/>
+                    <rng:ref name="diplomatique"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+              </rng:element>
+            </rng:choice>
+          </rng:oneOrMore>          
+        </rng:group>
+      </rng:choice>
+    </rng:element>
+  </rng:define>
+  
+  <!-- typer les id -->
+  <rng:define name="id">
+    <rng:attribute name="xml:id">
+      <data type="ID"/>
+    </rng:attribute>
+  </rng:define>
+    
+  <rng:include href="../../diple/schema/acte.rng"/> <!-- appelle le teiHeader, date, etc. -->
+</rng:grammar>
