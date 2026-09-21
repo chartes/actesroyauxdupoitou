@@ -1,0 +1,75 @@
+{
+  "title": "Actes royaux du Poitou",
+  "github": "https://github.com/chartes/actesroyauxdupoitou",
+  "git_commit": "6e2d0471b5a4be423d76de3e2baa48f706297f66",
+  "elec_url": "http://corpus.enc.sorbonne.fr/actesroyauxdupoitou/",
+  "generated_at": "2026-08-26T11:34:14.586131+00:00",
+  "documents": [
+    {
+      "path": "data/tome1.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "ced881203e57329786db41f7fbe359b423584308261f4a6f45a2118d5f178bb9"
+    },
+    {
+      "path": "data/tome10.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "5cbb1d16974e080130a5e1b7f858d108973db7521239bdb92c8a3fbeec631e87"
+    },
+    {
+      "path": "data/tome11.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "030a1c9a41f413df7112b78827ee81dae8fc246ca0e1c7ae3286503a981fd4e2"
+    },
+    {
+      "path": "data/tome12.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "fc6c5501e1ce099ccf69bc010076611aed66788172082abdd342ef879d0fff4d"
+    },
+    {
+      "path": "data/tome2.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "cc7afa7508a57097e49657045aa9dc1b590210f35468c5b2fa9e26de88fe3120"
+    },
+    {
+      "path": "data/tome3.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "1067858bfa9946bf3c257a0dd97e83c4fb81889ad1f9ea25a34231d9e6f39292"
+    },
+    {
+      "path": "data/tome4.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "9bd8199c0a8dccf6c00e0dbb2893e81a191709577fb21f16563922902f6ac48a"
+    },
+    {
+      "path": "data/tome5.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "07738aef6dbba9c22feb2992c82f5c56fdeacfb5139bdb019e660de5cbfcf95e"
+    },
+    {
+      "path": "data/tome6.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "0e6b75690646e526850044e5e92d08b127f3bc0ac4eff3faad3bb7557b84448b"
+    },
+    {
+      "path": "data/tome7.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "be8c71c1e15c9b3fde14fa7780e141ac1653da497014a56b06fe174042226241"
+    },
+    {
+      "path": "data/tome8.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "7d90324d53fb9855d1b3df36d2b84bfc69366b29b5f4ca3cb203d96838cd77ac"
+    },
+    {
+      "path": "data/tome9.xml",
+      "title": "Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France",
+      "sha256": "28a8fc79d3df31814af71aa71e98c7013b6b1217e8219d0b3b3cd76bb64799a9"
+    }
+  ],
+  "site_context": {
+    "resources": 1474,
+    "html_pages": 1474,
+    "failures": 0
+  },
+  "limitations": "The TEI files are unmodified. Their existing headers retain the editorial credits and licence statements. No refsDecl/citeStructure was added, so DoTS navigation remains document-level."
+}
