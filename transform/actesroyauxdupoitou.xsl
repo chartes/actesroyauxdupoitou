@@ -189,6 +189,60 @@
   </xsl:template>
 
   <!--
+    Document unique (2026-09-30). Les 12 tomes sont reunis dans un seul
+    document : TEI/text/front porte les textes d'accompagnement (presentation,
+    documentation), TEI/text/group les 12 tomes, chacun text[@xml:id='tomeN']
+    avec son front (titre, div[@type='volume'], introductions) et son group
+    d'actes.
+
+    Page d'un tome. DoTS la sert sous deux formes :
+      - fragment normal : dts:wrapper > text[@xml:id='tomeN'] ;
+      - excludeFragments=true : dts:wrapper > front, group (les introductions
+        et les actes ne sont pas des enfants directs du tome : DoTS ne les
+        retire pas).
+    Dans les deux cas on n'affiche que le titre du tome et son bloc « volume »
+    (volume imprime, actes, encodeurs) ; introductions et actes ont leurs
+    propres pages. Priorite 25 : au-dessus du deport des notes (10-11).
+  -->
+  <xsl:template match="tei:text[tei:group][parent::*[local-name() = 'wrapper']]" priority="25">
+    <article class="text tome" id="{@xml:id}">
+      <xsl:call-template name="arp-page-tome"/>
+    </article>
+  </xsl:template>
+  <xsl:template match="*[local-name() = 'wrapper'][tei:front][tei:group][not(tei:teiHeader)]" priority="25">
+    <article class="text tome">
+      <xsl:call-template name="arp-page-tome"/>
+    </article>
+  </xsl:template>
+  <xsl:template name="arp-page-tome">
+    <header class="front">
+      <xsl:apply-templates select="tei:front/tei:head"/>
+      <xsl:apply-templates select="tei:front/tei:div[@type = 'volume']"/>
+    </header>
+  </xsl:template>
+
+  <!-- Documentation : valeurs d'attribut (<val>), que hteiml ne connait pas. -->
+  <xsl:template match="tei:val">
+    <code class="val"><xsl:apply-templates/></code>
+  </xsl:template>
+
+  <!-- Titres profonds (sections imbriquees de la documentation) : hteiml
+       transmet aux titres un niveau egal a la profondeur de la section et
+       produit <h7> au niveau 7, qui n'existe pas en HTML ; on plafonne a 6.
+       En dessous, le titre est rendu exactement comme avant. -->
+  <xsl:template match="tei:div/tei:head" priority="2">
+    <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
+    <xsl:choose>
+      <xsl:when test="$level &gt; 6">
+        <xsl:apply-imports><xsl:with-param name="level" select="6"/></xsl:apply-imports>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-imports><xsl:with-param name="level" select="$level"/></xsl:apply-imports>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!--
     Page de depart d'un acte (2026-09-30). DoTS sert chaque acte seul : le
     dernier <pb> qui le precede reste dans l'acte d'avant, et la page de
     l'edition imprimee ou il commence n'etait plus affichee (l'ELEC, qui

@@ -69,10 +69,69 @@
       }
     ]
   },
+  "fusion": {
+    "description": "Le 30/09/2026, les 12 fichiers (un par tome) ont été réunis en un seul document, data/actesroyauxdupoitou.xml (TEI/@xml:id = recueil_poitou). Le contenu des 1 746 actes et des 13 introductions y est identique, en XML canonique, à celui des 12 fichiers d'avant la réunion, dont les empreintes sont données ci-dessous ; ces fichiers restent dans l'historique git.",
+    "git_commit_avant_fusion": "0ee3a5e17cc30d5337a989c4ba922cb505c45638",
+    "documents_avant_fusion": [
+      {
+        "path": "data/tome1.xml",
+        "sha256": "bf3733b3b61dbb769ec43ae3d74db64ab723db244eaaab50d7850c99a80cf03b"
+      },
+      {
+        "path": "data/tome2.xml",
+        "sha256": "12440a6fca1abe371dd4c508f2f5ee6b80ccbf5cc29eece5b9a977e70000c545"
+      },
+      {
+        "path": "data/tome3.xml",
+        "sha256": "5d52ba17f914c0b93da8643a3abb6deb3f7ea136d8d2e0073cb2db27ba40026d"
+      },
+      {
+        "path": "data/tome4.xml",
+        "sha256": "d369b7d3a71015443dd786e0ff8e2fa2269a89154cae25f0f00fd70d4ded8758"
+      },
+      {
+        "path": "data/tome5.xml",
+        "sha256": "c9ffc7aefd5ecadd57595256aac0a69dce7f74e5ac287ac0dd9f096987691854"
+      },
+      {
+        "path": "data/tome6.xml",
+        "sha256": "00568f7bdac244ec04cf33de539354c184346021637201c849ade7d1f973b320"
+      },
+      {
+        "path": "data/tome7.xml",
+        "sha256": "27089cb2a15b0a3b68a9f8747244ef5b6751c422b3509d59724e95f10992e465"
+      },
+      {
+        "path": "data/tome8.xml",
+        "sha256": "1b25e0464e8d69acaa97dcb17d3cbaa020ed120bec1e8ef1292797fb0b5f323c"
+      },
+      {
+        "path": "data/tome9.xml",
+        "sha256": "e0e1edefecbe3d12efcdcf21aa3529b44599c26e66b5412140fc5719a4789717"
+      },
+      {
+        "path": "data/tome10.xml",
+        "sha256": "4368af1d3df78fe9799587d948a1fa83d4c21ddb0c6e0bee5375ead951692d68"
+      },
+      {
+        "path": "data/tome11.xml",
+        "sha256": "8c42eb6a2ac5c0016bf05131db3a02c19a8e9c81edf2a4b9720cd0207ae5a3bc"
+      },
+      {
+        "path": "data/tome12.xml",
+        "sha256": "f414a0bbc7655896b884813e81ee5cf66086362c871f6497fe2616d57e6e351c"
+      }
+    ],
+    "document_unique": {
+      "path": "data/actesroyauxdupoitou.xml",
+      "id": "recueil_poitou",
+      "sha256_a_la_fusion": "58d284decfcf177d614f4ab06694f4a5f486fee5401332c35ea9eb18f208ce58"
+    }
+  },
   "site_context": {
     "resources": 1474,
     "html_pages": 1474,
     "failures": 0
   },
-  "limites": "Le texte des actes n'a pas été réécrit ; les modifications (en-tête, unités citables, conformité TEI, repères de page) sont décrites dans README.md et dans l'historique git. Le dossier site-context/ n'est pas versionné."
+  "limites": "Le texte des actes n'a pas été réécrit ; les modifications (en-tête, unités citables, conformité TEI, repères de page, réunion des tomes en un document) sont décrites dans README.md et dans l'historique git. Le dossier site-context/ n'est pas versionné."
 }
