@@ -219,7 +219,7 @@
             </body>
         </text>
         <text xml:id="tome4_0476" subtype="article" n="CCCCLXXVI">
-            <front>
+            <front><milestone unit="page" n="4" type="depart"/>
                 <head>CCCCLXXVI</head>
                 <docDate>
                     <date when="1369-11-23">23 novembre 1369</date>
@@ -835,7 +835,7 @@
             </body>
         </text>
         <text xml:id="tome4_0481" subtype="article" n="CCCCLXXXI">
-            <front>
+            <front><milestone unit="page" n="18" type="depart"/>
                 <head>CCCCLXXXI</head>
                 <docDate>
                     <date when="1369-11">Novembre 1369</date>
@@ -1112,7 +1112,7 @@
             </body>
         </text>
         <text xml:id="tome4_0484" subtype="article" n="CCCCLXXXIV">
-            <front>
+            <front><milestone unit="page" n="25" type="depart"/>
                 <head>CCCCLXXXIV</head>
                 <docDate>
                     <date when="1369-12">Décembre 1369</date>
@@ -1226,7 +1226,7 @@
             </body>
         </text>
         <text xml:id="tome4_0485" subtype="article" n="CCCCLXXXV">
-            <front>
+            <front><milestone unit="page" n="28" type="depart"/>
                 <head>CCCCLXXXV</head>
                 <docDate>
                     <date when="1369-12">Décembre 1369</date>
@@ -1375,7 +1375,7 @@
             </body>
         </text>
         <text xml:id="tome4_0486" subtype="article" n="CCCCLXXXVI">
-            <front>
+            <front><milestone unit="page" n="32" type="depart"/>
                 <head>CCCCLXXXVI</head>
                 <docDate>
                     <date when="1369-12">Décembre 1369</date>
@@ -1465,7 +1465,7 @@
             </body>
         </text>
         <text xml:id="tome4_0487" subtype="article" n="CCCCLXXXVII">
-            <front>
+            <front><milestone unit="page" n="34" type="depart"/>
                 <head>CCCCLXXXVII</head>
                 <docDate>
                     <date when="1369-12">Décembre 1369</date>
@@ -1553,7 +1553,7 @@
             </body>
         </text>
         <text xml:id="tome4_0488" subtype="article" n="CCCCLXXXVIII">
-            <front>
+            <front><milestone unit="page" n="36" type="depart"/>
                 <head>CCCCLXXXVIII</head>
                 <docDate>
                     <date when="1370-01-04">4 janvier 1370</date>
@@ -1628,7 +1628,7 @@
             </body>
         </text>
         <text xml:id="tome4_0489" subtype="article" n="CCCCLXXXIX">
-            <front>
+            <front><milestone unit="page" n="38" type="depart"/>
                 <head>CCCCLXXXIX</head>
                 <docDate>
                     <date when="1370-01">Janvier 1370</date>
@@ -1757,7 +1757,7 @@
             </body>
         </text>
         <text xml:id="tome4_0490" subtype="article" n="CCCCXC">
-            <front>
+            <front><milestone unit="page" n="41" type="depart"/>
                 <head>CCCCXC</head>
                 <docDate>
                     <date when="1370-03-02">2 mars 1370</date>
@@ -1922,7 +1922,7 @@
             </body>
         </text>
         <text xml:id="tome4_0491" subtype="article" n="CCCCXCI">
-            <front>
+            <front><milestone unit="page" n="44" type="depart"/>
                 <head>CCCCXCI</head>
                 <docDate>
                     <date when="1370-03-04">4 mars 1370</date>
@@ -2095,7 +2095,7 @@
             </body>
         </text>
         <text xml:id="tome4_0492" subtype="article" n="CCCCXCII">
-            <front>
+            <front><milestone unit="page" n="48" type="depart"/>
                 <head>CCCCXCII</head>
                 <docDate>
                     <date when="1370-03-20">20 mars 1370</date>
@@ -2202,7 +2202,7 @@
             </body>
         </text>
         <text xml:id="tome4_0493" subtype="article" n="CCCCXCIII">
-            <front>
+            <front><milestone unit="page" n="51" type="depart"/>
                 <head>CCCCXCIII</head>
                 <docDate>
                     <date when="1370-03">Mars 1370</date>
@@ -2283,7 +2283,7 @@
             </body>
         </text>
         <text xml:id="tome4_0494" subtype="article" n="CCCCXCIV">
-            <front>
+            <front><milestone unit="page" n="53" type="depart"/>
                 <head>CCCCXCIV</head>
                 <docDate>
                     <date when="1370-04-12">12 avril 1370</date>
@@ -2464,7 +2464,7 @@
             </body>
         </text>
         <text xml:id="tome4_0495" subtype="article" n="CCCCXCV">
-            <front>
+            <front><milestone unit="page" n="57" type="depart"/>
                 <head>CCCCXCV</head>
                 <docDate>
                     <date when="1370-04">Avril 1370</date>
@@ -2765,7 +2765,7 @@
             </body>
         </text>
         <text xml:id="tome4_0497" subtype="article" n="CCCCXCVII">
-            <front>
+            <front><milestone unit="page" n="63" type="depart"/>
                 <head>CCCCXCVII</head>
                 <docDate>
                     <date when="1370-05">Mai 1370</date>
@@ -2887,7 +2887,7 @@
             </body>
         </text>
         <text xml:id="tome4_0498" subtype="article" n="CCCCXCVIII">
-            <front>
+            <front><milestone unit="page" n="66" type="depart"/>
                 <head>CCCCXCVIII</head>
                 <docDate>
                     <date when="1370-06-10">10 juin 1370</date>
@@ -2926,7 +2926,7 @@
             </body>
         </text>
         <text xml:id="tome4_0499" subtype="article" n="CCCCXCIX">
-            <front>
+            <front><milestone unit="page" n="67" type="depart"/>
                 <head>CCCCXCIX</head>
                 <argument>
                     <p>Remise à Regnaut Germaut, écuyer, de diverses rentes qu'il devait à Simon
@@ -3146,7 +3146,7 @@
             </body>
         </text>
         <text xml:id="tome4_0500" subtype="article" n="D">
-            <front>
+            <front><milestone unit="page" n="71" type="depart"/>
                 <head>D</head>
                 <docDate>
                     <date when="1370-07-08">8 juillet 1370</date>
@@ -3276,7 +3276,7 @@
             </body>
         </text>
         <text xml:id="tome4_0501" subtype="article" n="DI">
-            <front>
+            <front><milestone unit="page" n="74" type="depart"/>
                 <head>DI</head>
                 <docDate>
                     <date when="1370-11">Novembre 1370</date>
@@ -3423,7 +3423,7 @@
             </body>
         </text>
         <text xml:id="tome4_0502" subtype="article" n="DII">
-            <front>
+            <front><milestone unit="page" n="77" type="depart"/>
                 <head>DII</head>
                 <docDate>
                     <date when="1370-11">Novembre 1370</date>
@@ -3569,7 +3569,7 @@
             </body>
         </text>
         <text xml:id="tome4_0503" subtype="article" n="DIII">
-            <front>
+            <front><milestone unit="page" n="80" type="depart"/>
                 <head>DIII</head>
                 <docDate>
                     <date when="1370-11">Novembre 1370</date>
@@ -3702,7 +3702,7 @@
             </body>
         </text>
         <text xml:id="tome4_0504" subtype="article" n="DIV">
-            <front>
+            <front><milestone unit="page" n="83" type="depart"/>
                 <head>DIV</head>
                 <docDate>
                     <date when="1370-12">Décembre 1370</date>
@@ -3905,7 +3905,7 @@
             </body>
         </text>
         <text xml:id="tome4_0505" subtype="article" n="DV">
-            <front>
+            <front><milestone unit="page" n="88" type="depart"/>
                 <head>DV</head>
                 <docDate>
                     <date when="1371-01">Janvier 1371</date>
@@ -3998,7 +3998,7 @@
             </body>
         </text>
         <text xml:id="tome4_0506" subtype="article" n="DVI">
-            <front>
+            <front><milestone unit="page" n="90" type="depart"/>
                 <head>DVI</head>
                 <docDate>
                     <date when="1371-02-19">19 février 1371</date>
@@ -4103,7 +4103,7 @@
             </body>
         </text>
         <text xml:id="tome4_0507" subtype="article" n="DVII">
-            <front>
+            <front><milestone unit="page" n="92" type="depart"/>
                 <head>DVII</head>
                 <docDate>
                     <date when="1371-03">Mars 1371</date>
@@ -4289,7 +4289,7 @@
             </body>
         </text>
         <text xml:id="tome4_0508" subtype="article" n="DVIII">
-            <front>
+            <front><milestone unit="page" n="97" type="depart"/>
                 <head>DVIII</head>
                 <docDate>
                     <date when="1371-04-30">30 avril 1371</date>
@@ -4388,7 +4388,7 @@
             </body>
         </text>
         <text xml:id="tome4_0509" subtype="article" n="DIX">
-            <front>
+            <front><milestone unit="page" n="99" type="depart"/>
                 <head>DIX</head>
                 <docDate>
                     <date when="1371-05">Mai 1371</date>
@@ -4488,7 +4488,7 @@
             </body>
         </text>
         <text xml:id="tome4_0510" subtype="article" n="DX">
-            <front>
+            <front><milestone unit="page" n="101" type="depart"/>
                 <head>DX</head>
                 <docDate>
                     <date when="1371-06-06">6 juin 1371</date>
@@ -4695,7 +4695,7 @@
             </body>
         </text>
         <text xml:id="tome4_0512" subtype="article" n="DXII">
-            <front>
+            <front><milestone unit="page" n="106" type="depart"/>
                 <head>DXII</head>
                 <docDate>
                     <date when="1371-08">Août 1371</date>
@@ -4827,7 +4827,7 @@
             </body>
         </text>
         <text xml:id="tome4_0513" subtype="article" n="DXIII">
-            <front>
+            <front><milestone unit="page" n="109" type="depart"/>
                 <head>DXIII</head>
                 <docDate>
                     <date when="1371-11-03">3 novembre 1371</date>
@@ -5191,7 +5191,7 @@
             </body>
         </text>
         <text xml:id="tome4_0515" subtype="article" n="DXV">
-            <front>
+            <front><milestone unit="page" n="117" type="depart"/>
                 <head>DXV</head>
                 <docDate>
                     <date when="1372-07-29">29 juillet 1372</date>
@@ -5300,7 +5300,7 @@
             </body>
         </text>
         <text xml:id="tome4_0516" subtype="article" n="DXVI">
-            <front>
+            <front><milestone unit="page" n="120" type="depart"/>
                 <head>DXVI</head>
                 <docDate>
                     <date when="1372-07">Juillet 1372</date>
@@ -5695,7 +5695,7 @@
             </body>
         </text>
         <text xml:id="tome4_0517" subtype="article" n="DXVII">
-            <front>
+            <front><milestone unit="page" n="129" type="depart"/>
                 <head>DXVII</head>
                 <docDate>
                     <date when="1372-08-12">12 août 1372</date>
@@ -5832,7 +5832,7 @@
             </body>
         </text>
         <text xml:id="tome4_0518" subtype="article" n="DXVIII">
-            <front>
+            <front><milestone unit="page" n="132" type="depart"/>
                 <head>DXVIII</head>
                 <docDate>
                     <date when="1372-08">Août 1372</date>
@@ -5940,7 +5940,7 @@
             </body>
         </text>
         <text xml:id="tome4_0519" subtype="article" n="DXIX">
-            <front>
+            <front><milestone unit="page" n="134" type="depart"/>
                 <head>DXIX</head>
                 <docDate>
                     <date when="1372-09-12">12 septembre 1372</date>
@@ -6131,7 +6131,7 @@
             </body>
         </text>
         <text xml:id="tome4_0520" subtype="article" n="DXX">
-            <front>
+            <front><milestone unit="page" n="139" type="depart"/>
                 <head>DXX</head>
                 <docDate>
                     <date when="1372-09-29">29 septembre 1372</date>
@@ -6306,7 +6306,7 @@
             </body>
         </text>
         <text xml:id="tome4_0521" subtype="article" n="DXXI">
-            <front>
+            <front><milestone unit="page" n="143" type="depart"/>
                 <head>DXXI</head>
                 <docDate>
                     <date when="1372-09">Septembre 1372</date>
@@ -6444,7 +6444,7 @@
             </body>
         </text>
         <text xml:id="tome4_0522" subtype="article" n="DXXII">
-            <front>
+            <front><milestone unit="page" n="146" type="depart"/>
                 <head>DXXII</head>
                 <docDate>
                     <date when="1372-09">Septembre 1372</date>
@@ -6726,7 +6726,7 @@
             </body>
         </text>
         <text xml:id="tome4_0524" subtype="article" n="DXXIV">
-            <front>
+            <front><milestone unit="page" n="153" type="depart"/>
                 <head>DXXIV</head>
                 <docDate>
                     <date when="1372-11-26">26 novembre 1372</date>
@@ -6908,7 +6908,7 @@
             </body>
         </text>
         <text xml:id="tome4_0526" subtype="article" n="DXXVI">
-            <front>
+            <front><milestone unit="page" n="157" type="depart"/>
                 <head>DXXVI</head>
                 <docDate>
                     <date when="1372-11-26">26 novembre 1372</date>
@@ -6998,7 +6998,7 @@
             </body>
         </text>
         <text xml:id="tome4_0527" subtype="article" n="DXXVII">
-            <front>
+            <front><milestone unit="page" n="159" type="depart"/>
                 <head>DXXVII</head>
                 <docDate>
                     <date when="1372-11">Novembre 1372</date>
@@ -7134,7 +7134,7 @@
             </body>
         </text>
         <text xml:id="tome4_0528" subtype="article" n="DXXVIII">
-            <front>
+            <front><milestone unit="page" n="162" type="depart"/>
                 <head>DXXVIII</head>
                 <docDate>
                     <date when="1372-11">Novembre 1372</date>
@@ -7278,7 +7278,7 @@
             </body>
         </text>
         <text xml:id="tome4_0529" subtype="article" n="DXXIX">
-            <front>
+            <front><milestone unit="page" n="166" type="depart"/>
                 <head>DXXIX</head>
                 <docDate>
                     <date when="1372-12-08">8 décembre 1372</date>
@@ -7532,7 +7532,7 @@
             </body>
         </text>
         <text xml:id="tome4_0530" subtype="article" n="DXXX">
-            <front>
+            <front><milestone unit="page" n="172" type="depart"/>
                 <head>DXXX</head>
                 <docDate>
                     <date when="1372-12-10">10 décembre 1372</date>
@@ -7696,7 +7696,7 @@
             </body>
         </text>
         <text xml:id="tome4_0531" subtype="article" n="DXXXI">
-            <front>
+            <front><milestone unit="page" n="176" type="depart"/>
                 <head>DXXXI</head>
                 <docDate>
                     <date when="1372-12-15">15 décembre 1372</date>
@@ -8197,7 +8197,7 @@
             </body>
         </text>
         <text xml:id="tome4_0532" subtype="article" n="DXXXII">
-            <front>
+            <front><milestone unit="page" n="190" type="depart"/>
                 <head>DXXXII</head>
                 <docDate>
                     <date when="1372-12-15">15 décembre 1372</date>
@@ -8399,7 +8399,7 @@
             </body>
         </text>
         <text xml:id="tome4_0533" subtype="article" n="DXXXIII">
-            <front>
+            <front><milestone unit="page" n="195" type="depart"/>
                 <head>DXXXIII</head>
                 <docDate>
                     <date when="1372-12-15">15 décembre 1372</date>
@@ -8566,7 +8566,7 @@
             </body>
         </text>
         <text xml:id="tome4_0534" subtype="article" n="DXXXIV">
-            <front>
+            <front><milestone unit="page" n="199" type="depart"/>
                 <head>DXXXIV</head>
                 <docDate>
                     <date when="1372-12-15">15 décembre 1372</date>
@@ -9033,7 +9033,7 @@
             </body>
         </text>
         <text xml:id="tome4_0536" subtype="article" n="DXXXVI">
-            <front>
+            <front><milestone unit="page" n="209" type="depart"/>
                 <head>DXXXVI</head>
                 <docDate>
                     <date when="1372-12-15">15 décembre</date>
@@ -9173,7 +9173,7 @@
             </body>
         </text>
         <text xml:id="tome4_0537" subtype="article" n="DXXXVII">
-            <front>
+            <front><milestone unit="page" n="213" type="depart"/>
                 <head>DXXXVII</head>
                 <docDate>
                     <date when="1372-12-23">23 décembre 1372</date>
@@ -9304,7 +9304,7 @@
             </body>
         </text>
         <text xml:id="tome4_0538" subtype="article" n="DXXXVIII">
-            <front>
+            <front><milestone unit="page" n="217" type="depart"/>
                 <head>DXXXVIII</head>
                 <docDate>
                     <date when="1372-12-23">23 décembre 1372</date>
@@ -9499,7 +9499,7 @@
             </body>
         </text>
         <text xml:id="tome4_0539" subtype="article" n="DXXXIX">
-            <front>
+            <front><milestone unit="page" n="221" type="depart"/>
                 <head>DXXXIX</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -9781,7 +9781,7 @@
             </body>
         </text>
         <text xml:id="tome4_0540" subtype="article" n="DXL">
-            <front>
+            <front><milestone unit="page" n="229" type="depart"/>
                 <head>DXL</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -9897,7 +9897,7 @@
             </body>
         </text>
         <text xml:id="tome4_0541" subtype="article" n="DXLI">
-            <front>
+            <front><milestone unit="page" n="233" type="depart"/>
                 <head>DXLI</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10040,7 +10040,7 @@
             </body>
         </text>
         <text xml:id="tome4_0542" subtype="article" n="DXLII">
-            <front>
+            <front><milestone unit="page" n="236" type="depart"/>
                 <head>DXLII</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10190,7 +10190,7 @@
             </body>
         </text>
         <text xml:id="tome4_0543" subtype="article" n="DXLIII">
-            <front>
+            <front><milestone unit="page" n="240" type="depart"/>
                 <head>DXLIII</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10291,7 +10291,7 @@
             </body>
         </text>
         <text xml:id="tome4_0544" subtype="article" n="DXLIV">
-            <front>
+            <front><milestone unit="page" n="241" type="depart"/>
                 <head>DXLIV</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10698,7 +10698,7 @@
             </body>
         </text>
         <text xml:id="tome4_0546" subtype="article" n="DXLVI">
-            <front>
+            <front><milestone unit="page" n="251" type="depart"/>
                 <head>DXLVI</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10766,7 +10766,7 @@
             </body>
         </text>
         <text xml:id="tome4_0547" subtype="article" n="DXLVII">
-            <front>
+            <front><milestone unit="page" n="253" type="depart"/>
                 <head>DXLVII</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10865,7 +10865,7 @@
             </body>
         </text>
         <text xml:id="tome4_0548" subtype="article" n="DXLVIII">
-            <front>
+            <front><milestone unit="page" n="255" type="depart"/>
                 <head>DXLVIII</head>
                 <docDate>
                     <date when="1372-12">Décembre 1372</date>
@@ -10940,7 +10940,7 @@
             </body>
         </text>
         <text xml:id="tome4_0549" subtype="article" n="DXLIX">
-            <front>
+            <front><milestone unit="page" n="257" type="depart"/>
                 <head>DXLIX</head>
                 <docDate>
                     <date when="1372">1372</date>
@@ -11996,7 +11996,7 @@
             </body>
         </text>
         <text xml:id="tome4_0554" subtype="article" n="DLIV">
-            <front>
+            <front><milestone unit="page" n="282" type="depart"/>
                 <head>DLIV</head>
                 <docDate>
                     <date when="1373-01">Janvier 1373</date>
@@ -12184,7 +12184,7 @@
             </body>
         </text>
         <text xml:id="tome4_0555" subtype="article" n="DLV">
-            <front>
+            <front><milestone unit="page" n="286" type="depart"/>
                 <head>DLV</head>
                 <docDate>
                     <date when="1373-01">Janvier 1373</date>
@@ -12407,7 +12407,7 @@
             </body>
         </text>
         <text xml:id="tome4_0556" subtype="article" n="DLVI">
-            <front>
+            <front><milestone unit="page" n="292" type="depart"/>
                 <head>DLVI</head>
                 <docDate>
                     <date when="1373-01">Janvier 1373</date>
@@ -12526,7 +12526,7 @@
             </body>
         </text>
         <text xml:id="tome4_0556ter" subtype="article" n="DLVIter">
-            <front>
+            <front><milestone unit="page" n="LXXIII" type="depart"/>
                 <head>DLVI <emph>ter</emph></head>
                 <docDate>
                     <date when="1373-02-28">28 février 1373</date>
@@ -12559,7 +12559,7 @@
         </text>
         
         <text xml:id="tome4_0557" subtype="article" n="DLVII">
-            <front>
+            <front><milestone unit="page" n="LXXV" type="depart"/>
                 <head>DLVII</head>
                 <docDate>
                     <date when="1373-03">Mars 1373</date>
@@ -12653,7 +12653,7 @@
             </body>
         </text>
         <text xml:id="tome4_0558" subtype="article" n="DLVIII">
-            <front>
+            <front><milestone unit="page" n="296" type="depart"/>
                 <head>DLVIII</head>
                 <docDate>
                     <date when="1373-03">Mars 1373</date>
@@ -12832,7 +12832,7 @@
             </body>
         </text>
         <text xml:id="tome4_0559" subtype="article" n="DLIX">
-            <front>
+            <front><milestone unit="page" n="300" type="depart"/>
                 <head>DLIX</head>
                 <docDate>
                     <date notAfter="1373-04-08">Avril (avant le 8) 1373</date>
@@ -12953,7 +12953,7 @@
             </body>
         </text>
         <text xml:id="tome4_0560" subtype="article" n="DLX">
-            <front>
+            <front><milestone unit="page" n="302" type="depart"/>
                 <head>DLX</head>
                 <docDate>
                     <date when="1373-04">Avril 1373</date>
@@ -13346,7 +13346,7 @@
             </body>
         </text>
         <text xml:id="tome4_0564" subtype="article" n="DLXIV">
-            <front>
+            <front><milestone unit="page" n="312" type="depart"/>
                 <head>DLXIV</head>
                 <docDate>
                     <date when="1373-09">Septembre 1373</date>
@@ -13498,7 +13498,7 @@
             </body>
         </text>
         <text xml:id="tome4_0565" subtype="article" n="DLXV">
-            <front>
+            <front><milestone unit="page" n="316" type="depart"/>
                 <head>DLXV</head>
                 <docDate>
                     <date when="1373-10">Octobre 1373</date>
@@ -13630,7 +13630,7 @@
             </body>
         </text>
         <text xml:id="tome4_0566" subtype="article" n="DLXVI">
-            <front>
+            <front><milestone unit="page" n="319" type="depart"/>
                 <head>DLXVI</head>
                 <docDate>
                     <date when="1373-11-28">28 novembre 1373</date>
@@ -13749,7 +13749,7 @@
             </body>
         </text>
         <text xml:id="tome4_0567" subtype="article" n="DLXVII">
-            <front>
+            <front><milestone unit="page" n="322" type="depart"/>
                 <head>DLXVII</head>
                 <docDate>
                     <date when="1373-11">Novembre 1373</date>
@@ -13833,7 +13833,7 @@
             </body>
         </text>
         <text xml:id="tome4_0568" subtype="article" n="DLXVIII">
-            <front>
+            <front><milestone unit="page" n="324" type="depart"/>
                 <head>DLXVIII</head>
                 <docDate>
                     <date when="1374-01-31">31 janvier 1374</date>
@@ -13968,7 +13968,7 @@
             </body>
         </text>
         <text xml:id="tome4_0569" subtype="article" n="DLXIX">
-            <front>
+            <front><milestone unit="page" n="327" type="depart"/>
                 <head>DLXIX</head>
                 <docDate>
                     <date when="1374-01">Janvier 1374</date>
@@ -14321,7 +14321,7 @@
             </body>
         </text>
         <text xml:id="tome4_0572" subtype="article" n="DLXXII">
-            <front>
+            <front><milestone unit="page" n="336" type="depart"/>
                 <head>DLXXII</head>
                 <docDate>
                     <date when="1374-06">Juin 1774</date>
@@ -14537,7 +14537,7 @@
             </body>
         </text>
         <text xml:id="tome4_0574" subtype="article" n="DLXXIV">
-            <front>
+            <front><milestone unit="page" n="342" type="depart"/>
                 <head>DLXXIV</head>
                 <docDate>
                     <date when="1374-06">Juin 1374</date>
@@ -14575,7 +14575,7 @@
             </body>
         </text>
         <text xml:id="tome4_0575" subtype="article" n="DLXXV">
-            <front>
+            <front><milestone unit="page" n="342" type="depart"/>
                 <head>DLXXV</head>
                 <docDate>
                     <date when="1374-07">Juillet 1374</date>
@@ -14695,7 +14695,7 @@
             </body>
         </text>
         <text xml:id="tome4_0576" subtype="article" n="DLXXVI">
-            <front>
+            <front><milestone unit="page" n="346" type="depart"/>
                 <head>DLXXVI</head>
                 <docDate>
                     <date when="1374-08-29">29 août 1374</date>
@@ -14850,7 +14850,7 @@
             </body>
         </text>
         <text xml:id="tome4_0577" subtype="article" n="DLXXVII">
-            <front>
+            <front><milestone unit="page" n="350" type="depart"/>
                 <head>DLXXVII</head>
                 <docDate>
                     <date when="1374-08">Août 1374</date>
@@ -14918,7 +14918,7 @@
             </body>
         </text>
         <text xml:id="tome4_0578" subtype="article" n="DLXXVIII">
-            <front>
+            <front><milestone unit="page" n="351" type="depart"/>
                 <head>DLXXVIII</head>
                 <docDate>
                     <date when="1374-09">Septembre 1374</date>
@@ -15229,7 +15229,7 @@
             </body>
         </text>
         <text xml:id="tome4_0580" subtype="article" n="DLXXX">
-            <front>
+            <front><milestone unit="page" n="359" type="depart"/>
                 <head>DLXXX</head>
                 <docDate>
                     <date when="1374-12">Décembre 1374</date>
@@ -15459,7 +15459,7 @@
             </body>
         </text>
         <text xml:id="tome4_0582" subtype="article" n="DLXXXII">
-            <front>
+            <front><milestone unit="page" n="364" type="depart"/>
                 <head>DLXXXII</head>
                 <docDate>
                     <date when="1375-02-22">22 février 1375</date>
@@ -15587,7 +15587,7 @@
             </body>
         </text>
         <text xml:id="tome4_0583" subtype="article" n="DLXXXIII">
-            <front>
+            <front><milestone unit="page" n="367" type="depart"/>
                 <head>DLXXXIII</head>
                 <docDate>
                     <date when="1375-03-03">3 mars 1375</date>
@@ -15754,7 +15754,7 @@
             </body>
         </text>
         <text xml:id="tome4_0584" subtype="article" n="DLXXXIV">
-            <front>
+            <front><milestone unit="page" n="372" type="depart"/>
                 <head>DLXXXIV</head>
                 <docDate>
                     <date when="1375-05">Mai 1375</date>
@@ -15829,7 +15829,7 @@
             </body>
         </text>
         <text xml:id="tome4_0585" subtype="article" n="DLXXXV">
-            <front>
+            <front><milestone unit="page" n="373" type="depart"/>
                 <head>DLXXXV</head>
                 <docDate>
                     <date when="1375-06">Juin 1375</date>
@@ -15950,7 +15950,7 @@
             </body>
         </text>
         <text xml:id="tome4_0586" subtype="article" n="DLXXXVI">
-            <front>
+            <front><milestone unit="page" n="376" type="depart"/>
                 <head>DLXXXVI</head>
                 <docDate>
                     <date when="1375-07">Juillet 1375</date>
@@ -16079,7 +16079,7 @@
             </body>
         </text>
         <text xml:id="tome4_0587" subtype="article" n="DLXXXVII">
-            <front>
+            <front><milestone unit="page" n="380" type="depart"/>
                 <head>DLXXXVII</head>
                 <docDate>
                     <date when="1375-10">Octobre 1375</date>
@@ -16169,7 +16169,7 @@
             </body>
         </text>
         <text xml:id="tome4_0588" subtype="article" n="DLXXXVIII">
-            <front>
+            <front><milestone unit="page" n="382" type="depart"/>
                 <head>DLXXXVIII</head>
                 <docDate>
                     <date when="1375-11">Novembre 1375</date>
@@ -16497,7 +16497,7 @@
             </body>
         </text>
         <text xml:id="tome4_0591" subtype="article" n="DXCI">
-            <front>
+            <front><milestone unit="page" n="390" type="depart"/>
                 <head>DXCI</head>
                 <docDate>
                     <date when="1376-02">Février 1376</date>
@@ -16568,7 +16568,7 @@
             </body>
         </text>
         <text xml:id="tome4_0592" subtype="article" n="DXCII">
-            <front>
+            <front><milestone unit="page" n="392" type="depart"/>
                 <head>DXCII</head>
                 <docDate>
                     <date when="1376-03-14">14 mars 1376</date>
@@ -16872,7 +16872,7 @@
             </body>
         </text>
         <text xml:id="tome4_0594" subtype="article" n="DXCIV">
-            <front>
+            <front><milestone unit="page" n="400" type="depart"/>
                 <head>DXCIV</head>
                 <docDate>
                     <date notAfter="1376-04-08">Avril (avant le 8) 1376</date>
@@ -16956,7 +16956,7 @@
             </body>
         </text>
         <text xml:id="tome4_0595" subtype="article" n="DXCV">
-            <front>
+            <front><milestone unit="page" n="402" type="depart"/>
                 <head>DXCV</head>
                 <docDate>
                     <date when="1376-04-07">7 avril 1376</date>
@@ -17069,7 +17069,7 @@
             </body>
         </text>
         <text xml:id="tome4_0596" subtype="article" n="DXCVI">
-            <front>
+            <front><milestone unit="page" n="405" type="depart"/>
                 <head>DXCVI</head>
                 <docDate>
                     <date when="1376-06-06">6 juin 1376</date>
@@ -17236,7 +17236,7 @@
             </body>
         </text>
         <text xml:id="tome4_0597" subtype="article" n="DXCVII">
-            <front>
+            <front><milestone unit="page" n="409" type="depart"/>
                 <head>DXCVII</head>
                 <docDate>
                     <date when="1376-06">Juin 1376</date>
@@ -17349,7 +17349,7 @@
             </body>
         </text>
         <text xml:id="tome4_0598" subtype="article" n="DXCVIII">
-            <front>
+            <front><milestone unit="page" n="412" type="depart"/>
                 <head>DXCVIII</head>
                 <docDate>
                     <date when="1376-07">Juillet 1376</date>
@@ -17737,7 +17737,7 @@
             </body>
         </text>
         <text xml:id="tome4_0600" subtype="article" n="DC">
-            <front>
+            <front><milestone unit="page" n="421" type="depart"/>
                 <head>DC</head>
                 <docDate>
                     <date when="1376-12-31">31 décembre 1376</date>

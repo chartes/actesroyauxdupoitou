@@ -152,4 +152,20 @@
   </xsl:template>
   <!-- D5-FIN -->
 
+  <!--
+    Page de depart d'un acte (2026-09-30). DoTS sert chaque acte seul : le
+    dernier <pb> qui le precede reste dans l'acte d'avant, et la page de
+    l'edition imprimee ou il commence n'etait plus affichee (l'ELEC, qui
+    travaillait sur le tome entier, l'affichait). Elle est portee par la TEI
+    en tete du front, <milestone unit="page" n="N" type="depart"/>, et rendue
+    comme un <pb>. Absente quand l'acte commence lui-meme par un <pb>.
+  -->
+  <xsl:template match="tei:milestone[@unit = 'page'][@type = 'depart']">
+    <span class="pb depart" title="Page de l'édition imprimée où commence l'acte">
+      <xsl:text>{p. </xsl:text>
+      <xsl:value-of select="@n"/>
+      <xsl:text>}</xsl:text>
+    </span>
+  </xsl:template>
+
 </xsl:transform>

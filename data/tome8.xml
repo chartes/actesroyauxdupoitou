@@ -161,7 +161,7 @@
 					</body>
 				</text>
       <text xml:id="tome8_1027" subtype="article" n="MXXVII">
-        <front>
+        <front><milestone unit="page" n="20" type="depart"/>
           <head>MXXVII</head>
           <docDate>
             <date when="1431-04">Avril 1431</date>
@@ -220,7 +220,7 @@
 					</body>
 				</text>
 			<text xml:id="tome8_1029" subtype="article" n="MXXIX">
-        <front>
+        <front><milestone unit="page" n="28" type="depart"/>
           <head>MXXIX</head>
           <docDate>
             <date when="1431-05-10">10 mai 1431</date>
@@ -306,7 +306,7 @@
 						</body>
 					</text>
 				<text xml:id="tome8_1032" subtype="article" n="MXXXII">
-        <front>
+        <front><milestone unit="page" n="36" type="depart"/>
           <head>MXXXII</head>
           <docDate>
             <date when="1432-03-16">16 mars 1432</date>
@@ -339,7 +339,7 @@
         </body>
 			</text>
       <text xml:id="tome8_1033" subtype="article" n="MXXXIII">
-        <front>
+        <front><milestone unit="page" n="44" type="depart"/>
           <head>MXXXIII</head>
           <docDate>
             <date when="1433-10-07">7 octobre 1433</date>
@@ -396,7 +396,7 @@
 					</body>
 				</text>
 				<text xml:id="tome8_1035" subtype="article" n="MXXXV">
-					<front>
+					<front><milestone unit="page" n="53" type="depart"/>
 						<head>MXXXV</head>
 						<docDate>
 							<date when="1434-01">Janvier 1434</date>
@@ -459,7 +459,7 @@
 					</body>
 				</text>
 			<text xml:id="tome8_1037" subtype="article" n="MXXXVII">
-        <front>
+        <front><milestone unit="page" n="59" type="depart"/>
           <head>MXXXVII</head>
           <docDate>
             <date when="1434-09-08">8 septembre 1434</date>
@@ -484,7 +484,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1038" subtype="article" n="MXXXVIII">
-        <front>
+        <front><milestone unit="page" n="60" type="depart"/>
           <head>MXXXVIII</head>
           <docDate>
             <date when="1434-09">Septembre 1434</date>
@@ -520,7 +520,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1039" subtype="article" n="MXXXIX">
-        <front>
+        <front><milestone unit="page" n="69" type="depart"/>
           <head>MXXXIX</head>
           <docDate>
             <date when="1434-11">Novembre 1434</date>
@@ -595,7 +595,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1041" subtype="article" n="MXLI">
-        <front>
+        <front><milestone unit="page" n="100" type="depart"/>
           <head>MXLI</head>
           <docDate>
             <date when="1436-08">Août 1436</date>
@@ -624,7 +624,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1042" subtype="article" n="MXLII">
-        <front>
+        <front><milestone unit="page" n="105" type="depart"/>
           <head>MXLII</head>
           <docDate>
             <date when="1437-07-06">6 juillet 1437</date>
@@ -653,7 +653,7 @@
 				</body>
 			</text>	
 			<text xml:id="tome8_1043" subtype="article" n="MXLIII">
-        <front>
+        <front><milestone unit="page" n="107" type="depart"/>
           <head>MXLIII</head>
           <docDate>
             <date when="1438-04-20">20 avril 1438</date>
@@ -683,7 +683,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1044" subtype="article" n="MXLIV">
-        <front>
+        <front><milestone unit="page" n="110" type="depart"/>
           <head>MXLIV</head>
           <docDate>
             <date when="1439-02">Février 1439</date>
@@ -711,7 +711,7 @@
 				</body>
 			</text>	
 			<text xml:id="tome8_1045" subtype="article" n="MXLV">
-        <front>
+        <front><milestone unit="page" n="111" type="depart"/>
           <head>MXLV</head>
           <docDate>
             <date when="1440-04">Avril 1440</date>
@@ -740,7 +740,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1046" subtype="article" n="MXLVI">
-        <front>
+        <front><milestone unit="page" n="114" type="depart"/>
           <head>MXLVI</head>
           <docDate>
             <date when="1440-06">Juin 1440</date>
@@ -768,7 +768,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1047" subtype="article" n="MXLVII">
-        <front>
+        <front><milestone unit="page" n="118" type="depart"/>
           <head>MXLVII</head>
           <docDate>
             <date when="1441-06">Juin 1441</date>
@@ -797,7 +797,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1048" subtype="article" n="MXLVIII">
-        <front>
+        <front><milestone unit="page" n="124" type="depart"/>
           <head>MXLVIII</head>
           <docDate>
             <date when="1441-09">Septembre 1441</date>
@@ -827,7 +827,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1049" subtype="article" n="MXLIX">
-        <front>
+        <front><milestone unit="page" n="127" type="depart"/>
           <head>MXLIX</head>
           <docDate>
             <date when="1441-11">Novembre 1441</date>
@@ -856,7 +856,7 @@
         </body>
       </text>		
 			<text xml:id="tome8_1050" subtype="article" n="ML">
-        <front>
+        <front><milestone unit="page" n="130" type="depart"/>
           <head>ML</head>
           <docDate>
             <date when="1441-12">Décembre 1441</date>
@@ -914,7 +914,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1052" subtype="article" n="MLII">
-        <front>
+        <front><milestone unit="page" n="135" type="depart"/>
           <head>MLII</head>
           <docDate>
             <date when="1442-03">Mars 1442</date>
@@ -1033,7 +1033,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1056" subtype="article" n="MLVI">
-        <front>
+        <front><milestone unit="page" n="152" type="depart"/>
           <head>MLVI</head>
           <docDate>
             <date when="1443-05">Mai 1443</date>
@@ -1062,7 +1062,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1057" subtype="article" n="MLVII">
-        <front>
+        <front><milestone unit="page" n="156" type="depart"/>
           <head>MLVII</head>
           <docDate>
             <date when="1443-06">Juin 1443</date>
@@ -1117,7 +1117,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1059" subtype="article" n="MLIX">
-        <front>
+        <front><milestone unit="page" n="160" type="depart"/>
           <head>MLIX</head>
           <docDate>
             <date when="1443-06">Juin 1443</date>
@@ -1146,7 +1146,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1060" subtype="article" n="MLX">
-        <front>
+        <front><milestone unit="page" n="163" type="depart"/>
           <head>MLX</head>
           <docDate>
             <date when="1443-10">Octobre 1443</date>
@@ -1171,7 +1171,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1061" subtype="article" n="MLXI">
-        <front>
+        <front><milestone unit="page" n="164" type="depart"/>
           <head>MLXI</head>
           <docDate>
             <date when="1444-04">Avril 1444</date>
@@ -1201,7 +1201,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1062" subtype="article" n="MLXII">
-        <front>
+        <front><milestone unit="page" n="168" type="depart"/>
           <head>MLXII</head>
           <docDate>
             <date when="1444-05">Mai 1444</date>
@@ -1260,7 +1260,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1064" subtype="article" n="MLXIV">
-        <front>
+        <front><milestone unit="page" n="175" type="depart"/>
           <head>MLXIV</head>
           <docDate>
             <date when="1444-05">Mai 1444</date>
@@ -1289,7 +1289,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1065" subtype="article" n="MLXV">
-        <front>
+        <front><milestone unit="page" n="177" type="depart"/>
           <head>MLXV</head>
           <docDate>
             <date when="1444-05">Mai 1444</date>
@@ -1318,7 +1318,7 @@
         </body>
       </text>
 			<text xml:id="tome8_1066" subtype="article" n="MLXVI">
-        <front>
+        <front><milestone unit="page" n="185" type="depart"/>
           <head>MLXVI</head>
           <docDate>
             <date when="1444-08">Août 1444</date>
@@ -1347,7 +1347,7 @@
         </body>
       </text>
 			<text xml:id="tome8_1067" subtype="article" n="MLXVII">
-        <front>
+        <front><milestone unit="page" n="187" type="depart"/>
           <head>MLXVII</head>
           <docDate>
             <date when="1444-08">Août 1444</date>
@@ -1402,7 +1402,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1069" subtype="article" n="MLXIX">
-        <front>
+        <front><milestone unit="page" n="190" type="depart"/>
           <head>MLXIX</head>
           <docDate>
             <date when="1444-11">Novembre 1444</date>
@@ -1431,7 +1431,7 @@
 				</body>
 			</text>	
 			<text xml:id="tome8_1070" subtype="article" n="MLXX">
-        <front>
+        <front><milestone unit="page" n="192" type="depart"/>
           <head>MLXX</head>
           <docDate>
             <date when="1444-12">Décembre 1444</date>
@@ -1460,7 +1460,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1071" subtype="article" n="MLXXI">
-        <front>
+        <front><milestone unit="page" n="194" type="depart"/>
           <head>MLXXI</head>
           <docDate>
             <date when="1444-12">Décembre 1444</date>
@@ -1489,7 +1489,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1072" subtype="article" n="MLXXII">
-        <front>
+        <front><milestone unit="page" n="197" type="depart"/>
           <head>MLXXII</head>
           <docDate>
             <date when="1445-01">Janvier 1445</date>
@@ -1518,7 +1518,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1073" subtype="article" n="MLXXIII">
-        <front>
+        <front><milestone unit="page" n="200" type="depart"/>
           <head>MLXXIII</head>
           <docDate>
             <date when="1445-01">Janvier 1445</date>
@@ -1547,7 +1547,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1074" subtype="article" n="MLXXIV">
-        <front>
+        <front><milestone unit="page" n="203" type="depart"/>
           <head>MLXXIV</head>
           <docDate>
             <date when="1445-04">Avril 1445</date>
@@ -1576,7 +1576,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1075" subtype="article" n="MLXXV">
-        <front>
+        <front><milestone unit="page" n="205" type="depart"/>
           <head>MLXXV</head>
           <docDate>
             <date notBefore="1445-06">Juin 1445</date>
@@ -1605,7 +1605,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1076" subtype="article" n="MLXXVI">
-        <front>
+        <front><milestone unit="page" n="208" type="depart"/>
           <head>MLXXVI</head>
           <docDate>
             <date when="1445-08">Août 1445</date>
@@ -1634,7 +1634,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1077" subtype="article" n="MLXXVII">
-        <front>
+        <front><milestone unit="page" n="210" type="depart"/>
           <head>MLXXVII</head>
           <docDate>
             <date when="1445-10-27">27 octobre 1445</date>
@@ -1663,7 +1663,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1078" subtype="article" n="MLXXVIII">
-        <front>
+        <front><milestone unit="page" n="214" type="depart"/>
           <head>MLXXVIII</head>
           <docDate>
             <date when="1445-11">Novembre 1445</date>
@@ -1692,7 +1692,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1079" subtype="article" n="MLXXIX">
-        <front>
+        <front><milestone unit="page" n="217" type="depart"/>
           <head>MLXXIX</head>
           <docDate>
             <date when="1445-12">Décembre 1445</date>
@@ -1777,7 +1777,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1082" subtype="article" n="MLXXXII">
-        <front>
+        <front><milestone unit="page" n="230" type="depart"/>
           <head>MLXXXII</head>
           <docDate>
             <date when="1446-01">Janvier 1446</date>
@@ -1806,7 +1806,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1083" subtype="article" n="MLXXXIII">
-        <front>
+        <front><milestone unit="page" n="235" type="depart"/>
           <head>MLXXXIII</head>
           <docDate>
             <date when="1446-01">Janvier 1446</date>
@@ -1835,7 +1835,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1084" subtype="article" n="MLXXXIV">
-        <front>
+        <front><milestone unit="page" n="239" type="depart"/>
           <head>MLXXXIV</head>
           <docDate>
             <date when="1446-01">Janvier 1446</date>
@@ -1864,7 +1864,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1085" subtype="article" n="MLXXXV">
-        <front>
+        <front><milestone unit="page" n="241" type="depart"/>
           <head>MLXXXV</head>
           <docDate>
             <date when="1446-02">Février 1446</date>
@@ -1957,7 +1957,7 @@
 				</body>
 			</text>	
 			<text xml:id="tome8_1088" subtype="article" n="MLXXXVIII">
-        <front>
+        <front><milestone unit="page" n="258" type="depart"/>
           <head>MLXXXVIII</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -1986,7 +1986,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1089" subtype="article" n="MLXXXIX">
-        <front>
+        <front><milestone unit="page" n="261" type="depart"/>
           <head>MLXXXIX</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2015,7 +2015,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1090" subtype="article" n="MXC">
-        <front>
+        <front><milestone unit="page" n="263" type="depart"/>
           <head>MXC</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2044,7 +2044,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1091" subtype="article" n="MXCI">
-        <front>
+        <front><milestone unit="page" n="266" type="depart"/>
           <head>MXCI</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2073,7 +2073,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1092" subtype="article" n="MXCII">
-        <front>
+        <front><milestone unit="page" n="270" type="depart"/>
           <head>MXCII</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2158,7 +2158,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1095" subtype="article" n="MXCV">
-        <front>
+        <front><milestone unit="page" n="277" type="depart"/>
           <head>MXCV</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2187,7 +2187,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1096" subtype="article" n="MXCVI">
-        <front>
+        <front><milestone unit="page" n="280" type="depart"/>
           <head>MXCVI</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2216,7 +2216,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1097" subtype="article" n="MXCVII">
-        <front>
+        <front><milestone unit="page" n="286" type="depart"/>
           <head>MXCVII</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2245,7 +2245,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1098" subtype="article" n="MXCVIII">
-        <front>
+        <front><milestone unit="page" n="290" type="depart"/>
           <head>MXCVIII</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2300,7 +2300,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1100" subtype="article" n="MC">
-        <front>
+        <front><milestone unit="page" n="297" type="depart"/>
           <head>MC</head>
           <docDate>
             <date notAfter="1446-04-17">Avril 1446 (avant le 17)</date>
@@ -2359,7 +2359,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1102" subtype="article" n="MCII">
-        <front>
+        <front><milestone unit="page" n="309" type="depart"/>
           <head>MCII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2388,7 +2388,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1103" subtype="article" n="MCIII">
-        <front>
+        <front><milestone unit="page" n="312" type="depart"/>
           <head>MCIII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2417,7 +2417,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1104" subtype="article" n="MCIV">
-        <front>
+        <front><milestone unit="page" n="314" type="depart"/>
           <head>MCIV</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2446,7 +2446,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1105" subtype="article" n="MCV">
-        <front>
+        <front><milestone unit="page" n="317" type="depart"/>
           <head>MCV</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2475,7 +2475,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1106" subtype="article" n="MCVI">
-        <front>
+        <front><milestone unit="page" n="323" type="depart"/>
           <head>MCVI</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2504,7 +2504,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1107" subtype="article" n="MCVII">
-        <front>
+        <front><milestone unit="page" n="326" type="depart"/>
           <head>MCVII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2533,7 +2533,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1108" subtype="article" n="MCVIII">
-        <front>
+        <front><milestone unit="page" n="328" type="depart"/>
           <head>MCVIII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2562,7 +2562,7 @@
 				</body>
 			</text>						
 			<text xml:id="tome8_1109" subtype="article" n="MCIX">
-        <front>
+        <front><milestone unit="page" n="331" type="depart"/>
           <head>MCIX</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2591,7 +2591,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1110" subtype="article" n="MCX">
-        <front>
+        <front><milestone unit="page" n="333" type="depart"/>
           <head>MCX</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2616,7 +2616,7 @@
 				</body>
 			</text>		
 			<text xml:id="tome8_1111" subtype="article" n="MCXI">
-        <front>
+        <front><milestone unit="page" n="335" type="depart"/>
           <head>MCXI</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2645,7 +2645,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1112" subtype="article" n="MCXII">
-        <front>
+        <front><milestone unit="page" n="339" type="depart"/>
           <head>MCXII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2674,7 +2674,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1113" subtype="article" n="MCXIII">
-        <front>
+        <front><milestone unit="page" n="343" type="depart"/>
           <head>MCXIII</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2703,7 +2703,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1114" subtype="article" n="MCXIV">
-        <front>
+        <front><milestone unit="page" n="347" type="depart"/>
           <head>MCXIV</head>
           <docDate>
             <date notBefore="1446-04-16">Avril 1446 (après le 16)</date>
@@ -2732,7 +2732,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1115" subtype="article" n="MCXV">
-        <front>
+        <front><milestone unit="page" n="349" type="depart"/>
           <head>MCXV</head>
           <docDate>
             <date when="1446-04-29">29 avril 1446</date>
@@ -2761,7 +2761,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1116" subtype="article" n="MCXVI">
-        <front>
+        <front><milestone unit="page" n="352" type="depart"/>
           <head>MCXVI</head>
           <docDate>
             <date when="1446-05">Mai 1446</date>
@@ -2820,7 +2820,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1118" subtype="article" n="MCXVIII">
-        <front>
+        <front><milestone unit="page" n="361" type="depart"/>
           <head>MCXVIII</head>
           <docDate>
             <date when="1446-05">Mai 1446</date>
@@ -2849,7 +2849,7 @@
 				</body>
 			</text>	
 			<text xml:id="tome8_1119" subtype="article" n="MCXIX">
-        <front>
+        <front><milestone unit="page" n="364" type="depart"/>
           <head>MCXIX</head>
           <docDate>
             <date when="1446-06">Juin 1446</date>
@@ -2879,7 +2879,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1120" subtype="article" n="MCXX">
-        <front>
+        <front><milestone unit="page" n="379" type="depart"/>
           <head>MCXX</head>
           <docDate>
             <date when="1446-07">Juillet 1446</date>
@@ -2908,7 +2908,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1121" subtype="article" n="MCXXI">
-        <front>
+        <front><milestone unit="page" n="381" type="depart"/>
           <head>MCXXI</head>
           <docDate>
             <date when="1446-08">Août 1446</date>
@@ -2937,7 +2937,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1122" subtype="article" n="MCXXII">
-        <front>
+        <front><milestone unit="page" n="389" type="depart"/>
           <head>MCXXII</head>
           <docDate>
             <date when="1446-08">Août 1446</date>
@@ -2966,7 +2966,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1123" subtype="article" n="MCXXIII">
-        <front>
+        <front><milestone unit="page" n="391" type="depart"/>
           <head>MCXXIII</head>
           <docDate>
             <date when="1446-09-16">16 septembre 1446</date>
@@ -2994,7 +2994,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1124" subtype="article" n="MCXXIV">
-        <front>
+        <front><milestone unit="page" n="392" type="depart"/>
           <head>MCXXIV</head>
           <docDate>
             <date when="1446-10-04">4 octobre 1446</date>
@@ -3023,7 +3023,7 @@
 				</body>
 			</text>			
 			<text xml:id="tome8_1125" subtype="article" n="MCXXV">
-        <front>
+        <front><milestone unit="page" n="394" type="depart"/>
           <head>MCXXV</head>
           <docDate>
             <date when="1446-10">Octobre 1446</date>
@@ -3052,7 +3052,7 @@
 				</body>
 			</text>			
 			<text xml:id="tome8_1126" subtype="article" n="MCXXVI">
-        <front>
+        <front><milestone unit="page" n="396" type="depart"/>
           <head>MCXXVI</head>
           <docDate>
             <date when="1446-10">Octobre 1446</date>
@@ -3081,7 +3081,7 @@
 				</body>
 			</text>			
 			<text xml:id="tome8_1127" subtype="article" n="MCXXVII">
-        <front>
+        <front><milestone unit="page" n="399" type="depart"/>
           <head>MCXXVII</head>
           <docDate>
             <date when="1446-10">Octobre 1446</date>
@@ -3106,7 +3106,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1128" subtype="article" n="MCXXVIII">
-        <front>
+        <front><milestone unit="page" n="399" type="depart"/>
           <head>MCXXVIII</head>
           <docDate>
             <date when="1446-11">Novembre 1446</date>
@@ -3135,7 +3135,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1129" subtype="article" n="MCXXIX">
-        <front>
+        <front><milestone unit="page" n="404" type="depart"/>
           <head>MCXXIX</head>
           <docDate>
             <date when="1447-01">Janvier 1447</date>
@@ -3164,7 +3164,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1130" subtype="article" n="MCXXX">
-        <front>
+        <front><milestone unit="page" n="408" type="depart"/>
           <head>MCXXX</head>
           <docDate>
             <date when="1447-02">Février 1447</date>
@@ -3193,7 +3193,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1131" subtype="article" n="MCXXXI">
-        <front>
+        <front><milestone unit="page" n="413" type="depart"/>
           <head>MCXXXI</head>
           <docDate>
             <date when="1447-03">Mars 1447</date>
@@ -3253,7 +3253,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1133" subtype="article" n="MCXXXIII">
-        <front>
+        <front><milestone unit="page" n="422" type="depart"/>
           <head>MCXXXIII</head>
           <docDate>
             <date when="1447-03">Mars 1447</date>
@@ -3282,7 +3282,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1134" subtype="article" n="MCXXXIV">
-        <front>
+        <front><milestone unit="page" n="424" type="depart"/>
           <head>MCXXXIV</head>
           <docDate>
             <date when="1447-03">Mars 1447</date>
@@ -3311,7 +3311,7 @@
 				</body>
 			</text>
 			<text xml:id="tome8_1135" subtype="article" n="MCXXXV">
-        <front>
+        <front><milestone unit="page" n="427" type="depart"/>
           <head>MCXXXV</head>
           <docDate>
             <date when="1447-04">Avril 1447</date>
