@@ -79,9 +79,13 @@
   </xsl:template>
 
   <!-- appel de note (inline) -->
+  <!-- Infobulle (2026-09-30) : le texte de la note dans @title de l'appel, comme
+       sur le site Corpus historique (a.refnote title="1 Guillaume VI, …"). -->
   <xsl:template match="tei:note[@type = 'footnote' or @type = 'a' or not(@type)]" priority="10">
+    <xsl:variable name="n"><xsl:call-template name="actes-note-n"/></xsl:variable>
     <a class="noteref" id="fn-{generate-id()}-ref" href="#fn-{generate-id()}"
-       style="text-decoration:none;color:#a73136;font-weight:bold"><sup><xsl:call-template name="actes-note-n"/></sup></a>
+       title="{normalize-space(concat($n, ' ', .))}"
+       style="text-decoration:none;color:#a73136;font-weight:bold"><sup><xsl:value-of select="$n"/></sup></a>
   </xsl:template>
 
   <!-- deport des corps en pied de chaque acte / division d'introduction -->
