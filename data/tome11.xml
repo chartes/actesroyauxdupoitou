@@ -26,37 +26,39 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
                 <availability status="restricted">
-                    <p>L'École nationale des chartes met à disposition cette ressource électronique
-                        structurée, protégée par le code de la propriété intellectuelle sur les
-                        bases de données (L341-1), selon les termes de la licence Creative Commons :
-                        « Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0
-                        France ». Cette licence est disponible en ligne
-                        http://creativecommons.org/licenses/by-nc-nd/2.0/fr/ ou par courrier postal
-                        à Creative Commons, 171 Second Street, Suite 300, San Francisco, California
-                        94105, USA.</p>
-                    <p>Pas d'Utilisation Commerciale : L'École nationale des chartes souhaite
-                        encourager l'utilisation et l'amélioration de ses ressources électroniques,
-                        pour les intérêts de l'enseignement et de la recherche. Toute autorisation
-                        au-delà du champ de cette licence doit être obtenue auprès de l'École
-                        nationale des chartes.</p>
-                    <p>Pas de Modification : Afin de mieux servir la communauté scientifique,
-                        l'École nationale des chartes s'engage à conserver et à toujours offrir
-                        publiquement la version la plus à jour de ses ressources électroniques par
-                        une URI pérenne. Elle s'engage à les corriger et à les améliorer, à intégrer
-                        les contributions qui lui sont soumises (après validation par un comité
-                        scientifique), et à référencer l'origine de ces contributions. Toute
-                        modification de la ressource qui ne serait pas reversée à la version de
-                        référence sous l'autorité éditoriale de l'École nationale des chartes doit
-                        faire l'objet de l'accord de celle-ci, afin de ne pas disperser les
-                        contributions et de permettre les meilleures conditions possibles de
-                        collaboration scientifique.</p>
-                    <p>Paternité : l'École nationale des chartes demande à ce que toute publication
-                        dérivée de ses ressources électroniques comporte : 1) le nom de l'École
-                        nationale des chartes et, pour les publications électroniques, son logo 2)
-                        l'URI permettant d'accéder à la page citée sur notre site, ou à la page
-                        d'accueil de la ressource 3) la date du fichier source utilisé.</p>
-                    <p>Tout litige soulevé par le non respect des termes de cette licence sera
-                        soumis à la juridiction des tribunaux de Paris.</p>
+                  <licence target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">
+                      <p>L'École nationale des chartes met à disposition cette ressource électronique
+                          structurée, protégée par le code de la propriété intellectuelle sur les
+                          bases de données (L341-1), selon les termes de la licence Creative Commons :
+                          « Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0
+                          France ». Cette licence est disponible en ligne
+                          http://creativecommons.org/licenses/by-nc-nd/2.0/fr/ ou par courrier postal
+                          à Creative Commons, 171 Second Street, Suite 300, San Francisco, California
+                          94105, USA.</p>
+                      <p>Pas d'Utilisation Commerciale : L'École nationale des chartes souhaite
+                          encourager l'utilisation et l'amélioration de ses ressources électroniques,
+                          pour les intérêts de l'enseignement et de la recherche. Toute autorisation
+                          au-delà du champ de cette licence doit être obtenue auprès de l'École
+                          nationale des chartes.</p>
+                      <p>Pas de Modification : Afin de mieux servir la communauté scientifique,
+                          l'École nationale des chartes s'engage à conserver et à toujours offrir
+                          publiquement la version la plus à jour de ses ressources électroniques par
+                          une URI pérenne. Elle s'engage à les corriger et à les améliorer, à intégrer
+                          les contributions qui lui sont soumises (après validation par un comité
+                          scientifique), et à référencer l'origine de ces contributions. Toute
+                          modification de la ressource qui ne serait pas reversée à la version de
+                          référence sous l'autorité éditoriale de l'École nationale des chartes doit
+                          faire l'objet de l'accord de celle-ci, afin de ne pas disperser les
+                          contributions et de permettre les meilleures conditions possibles de
+                          collaboration scientifique.</p>
+                      <p>Paternité : l'École nationale des chartes demande à ce que toute publication
+                          dérivée de ses ressources électroniques comporte : 1) le nom de l'École
+                          nationale des chartes et, pour les publications électroniques, son logo 2)
+                          l'URI permettant d'accéder à la page citée sur notre site, ou à la page
+                          d'accueil de la ressource 3) la date du fichier source utilisé.</p>
+                      <p>Tout litige soulevé par le non respect des termes de cette licence sera
+                          soumis à la juridiction des tribunaux de Paris.</p>
+                  </licence>
                 </availability>
             </publicationStmt>
             <seriesStmt>
