@@ -16,7 +16,7 @@ Le texte provient des 12 fichiers **TEI d'origine** du site Corpus de l'École d
 
 | Dossier | Contenu |
 |---|---|
-| `data/` | le document TEI unique `actesroyauxdupoitou.xml` (identifiant DoTS `recueil_poitou`), qui contient les 12 tomes |
+| `data/` | le document TEI unique `actesroyauxdupoitou.xml` (identifiant DoTS `royaux_poitou`), qui contient les 12 tomes |
 | `metadata/` | métadonnées pour DoTS : `collection.tsv` (collection racine), `dots_metadata_mapping.xml` (métadonnées du document, lues dans l'en-tête), `documents_metadata.tsv` (liste du document ; non lue par le mapping actuel) |
 | `transform/` | feuille XSL propre au corpus (`actesroyauxdupoitou.xsl`), qui surcharge la feuille commune `hteiml` |
 | `schema/` | schéma d'origine du projet (`actesroyauxdupoitou.rng`) ; il inclut `../../diple/schema/acte.rng`, absent de ce dépôt |
@@ -27,7 +27,7 @@ Les pages du site Corpus archivées lors de la migration (`site-context/`, 1 474
 ## Structure du document unique
 
 ```
-TEI  xml:id="recueil_poitou"
+TEI  xml:id="royaux_poitou"
 ├── teiHeader            en-tête de la collection : titre, Paul Guérin, 4 contributeurs
 │                        (VJ, JC, LG, MH), financeur, éditeur, licence, 12 volumes
 │                        imprimés (sourceDesc/listBibl), historique de chaque tome
@@ -48,11 +48,11 @@ TEI  xml:id="recueil_poitou"
         └── …  text xml:id="tome12" n="XII"
 ```
 
-Le sommaire DoTS compte 1 773 entrées : 2 textes d'accompagnement, 12 tomes (« Tome VI (1390-1403) »), 13 introductions et 1 746 actes. Les identifiants des tomes, des introductions et des actes n'ont pas changé ; ils ne sont plus des documents mais des passages du document `recueil_poitou`.
+Le sommaire DoTS compte 1 773 entrées : 2 textes d'accompagnement, 12 tomes (« Tome VI (1390-1403) »), 13 introductions et 1 746 actes. Les identifiants des tomes, des introductions et des actes n'ont pas changé ; ils ne sont plus des documents mais des passages du document `royaux_poitou`.
 
 L'identifiant du document n'est pas `actesroyauxdupoitou` : c'est déjà celui de la collection racine, et DoTS cherche collections et documents dans le même registre (`@dtsResourceId`) ; un document du même nom rendrait la collection et le document inaccessibles.
 
-Adresses (application DoTS) : `…/actesroyauxdupoitou/document/recueil_poitou` pour la page de garde, `…?refId=tome6` pour un tome, `…?refId=tome6_0748` pour un acte, `…?refId=documentation` pour la documentation. API : `/api/dts/document?resource=recueil_poitou&ref=tome6_0748`.
+Adresses (application DoTS) : `…/actesroyauxdupoitou/document/royaux_poitou` pour la page de garde, `…?refId=tome6` pour un tome, `…?refId=tome6_0748` pour un acte, `…?refId=documentation` pour la documentation. API : `/api/dts/document?resource=royaux_poitou&ref=tome6_0748`.
 
 La **Documentation** reprend la page « Documentation » du site Corpus (`/actesroyauxdupoitou/schema`), rédigée par Frédéric Glorieux et Vincent Jolivet ; elle est convertie en TEI (sections, tableaux de grammaire, exemple en `egXML`, éléments en `gi`, attributs en `att`, valeurs en `val`), sans coupe.
 
@@ -86,7 +86,7 @@ La feuille `transform/` a été remplacée par celle réellement servie (`dd7e6e
 
 ## Import dans DoTS
 
-Le corpus s'importe dans une base BaseX `actesroyauxdupoitou` (collection racine `actesroyauxdupoitou`, un seul document `recueil_poitou`) avec les scripts du dépôt DoTS. La recette de passage de 12 documents à 1 est dans `PROPOSITION-reingestion.md`. Avant toute réingestion :
+Le corpus s'importe dans une base BaseX `actesroyauxdupoitou` (collection racine `actesroyauxdupoitou`, un seul document `royaux_poitou`) avec les scripts du dépôt DoTS. La recette de passage de 12 documents à 1 est dans `PROPOSITION-reingestion.md`. Avant toute réingestion :
 
 - sauvegarder la base (`db:create-backup`) ;
 - vérifier que la base ne porte pas de travail absent du dépôt (c'était le cas avant `b7af68c`) ;

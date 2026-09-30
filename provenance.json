@@ -70,7 +70,7 @@
     ]
   },
   "fusion": {
-    "description": "Le 30/09/2026, les 12 fichiers (un par tome) ont été réunis en un seul document, data/actesroyauxdupoitou.xml (TEI/@xml:id = recueil_poitou). Le contenu des 1 746 actes et des 13 introductions y est identique, en XML canonique, à celui des 12 fichiers d'avant la réunion, dont les empreintes sont données ci-dessous ; ces fichiers restent dans l'historique git.",
+    "description": "Le 30/09/2026, les 12 fichiers (un par tome) ont été réunis en un seul document, data/actesroyauxdupoitou.xml (TEI/@xml:id = royaux_poitou). Le contenu des 1 746 actes et des 13 introductions y est identique, en XML canonique, à celui des 12 fichiers d'avant la réunion, dont les empreintes sont données ci-dessous ; ces fichiers restent dans l'historique git.",
     "git_commit_avant_fusion": "0ee3a5e17cc30d5337a989c4ba922cb505c45638",
     "documents_avant_fusion": [
       {
@@ -124,8 +124,8 @@
     ],
     "document_unique": {
       "path": "data/actesroyauxdupoitou.xml",
-      "id": "recueil_poitou",
-      "sha256_a_la_fusion": "58d284decfcf177d614f4ab06694f4a5f486fee5401332c35ea9eb18f208ce58"
+      "id": "royaux_poitou",
+      "sha256_a_la_fusion": "cd37c0f959f7fdc666c3f16fed425860147ebb8509c2c3cdf6c9fb77860c17e7"
     }
   },
   "site_context": {
