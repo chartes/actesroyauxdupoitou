@@ -73,10 +73,10 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="introduction" match="//front/div[@type='introduction']" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(string((head)[1]))"/>
+          <citeData property="dct:title" use="normalize-space(string-join((head)[1]//text()[not(ancestor::note)], ''))"/>
         </citeStructure>
         <citeStructure unit="acte" match="//group/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), ' (', string-join(front/docDate/date, ', '), ')'))"/>
+          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), if (front/docDate/date) then concat(' (', string-join(front/docDate/date, ', '), ')') else ''))"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
