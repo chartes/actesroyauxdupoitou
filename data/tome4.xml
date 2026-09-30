@@ -13,9 +13,9 @@
             </titleStmt>
             <extent/> <!-- ajouter les stats sur le fichier source -->
             <publicationStmt>
+                <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
                 <date>2014</date>
                 <idno>http://elec.enc.sorbonne.fr/actesroyauxdupoitou/</idno>
-                <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
                 <address>
           <addrLine>19, rue de la Sorbonne</addrLine>
           <addrLine>75005 Paris</addrLine>
@@ -14441,7 +14441,7 @@
                             Pierre de Thury en 1382, on ne trouve ni date ni nom dans ces deux
                             listes incomplètes. Mais un acte d'octobre 1375, publié plus loin dans
                             une confirmation du 9 avril 1379, nous apprend que Guy était encore
-                            évêque de Maillezais à cette époque.</note></p>.</argument>
+                            évêque de Maillezais à cette époque.</note>.</p></argument>
                 <div type="tradition">
                     <listWit type="copie">
                         <witness n="B">AN JJ. 105, n° 403, fol. 205</witness>

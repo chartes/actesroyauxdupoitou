@@ -13,9 +13,9 @@
       </titleStmt>
 			<extent/> <!-- ajouter les stats sur le fichier source -->
       <publicationStmt>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
         <date>2013</date>
         <idno>http://elec.enc.sorbonne.fr/actesroyauxdupoitou/</idno>
-        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
         <address>
           <addrLine>19, rue de la Sorbonne</addrLine>
           <addrLine>75005 Paris</addrLine>
@@ -3568,9 +3568,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des chars vives.</emph></head>
-							</row>
+							<head><emph>Le pris des chars vives.</emph></head>
 							<row>
 								<cell>Item, est ordonné que bon beuf gras vif ne sera vendu oultre.</cell>
 								<cell><num>x.</num> livres.</cell>
@@ -3682,9 +3680,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des cuirs tannez.</emph></head>
-							</row>
+							<head><emph>Le pris des cuirs tannez.</emph></head>
 							<row>
 								<cell>Item, est ordonné que la meilleur pel de beuf tannée ne sera vendue oultre.</cell>
 								<cell><num>lx.</num> s.</cell>
@@ -3715,9 +3711,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des cuirs courroiez.</emph></head>
-							</row>
+							<head><emph>Le pris des cuirs courroiez.</emph></head>
 							<row>
 								<cell>Item, est ordonné que les couroieurs qui fourniront de toutes gresses pour courroier la <num>xii</num><hi rend="sup">ne</hi> de cordouan, n’auront oultre.</cell>
 								<cell><num>xxvii.</num> s. <num>vi.</num> d.</cell>
@@ -3748,9 +3742,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des houzeaulx et souliers.</emph></head>
-							</row>
+							<head><emph>Le pris des houzeaulx et souliers.</emph></head>
 							<row>
 								<cell>Item, est ordonné que les meilleurs botes ou ouseaulx de bonne vache pour homme, garnies d’escaffignons, ne seront vendues oultre.</cell>
 								<cell><num>xxx.</num> s.</cell>
@@ -3788,9 +3780,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris de la volaille, sauvasine et autres vivres.</emph></head>
-							</row>
+							<head><emph>Le pris de la volaille, sauvasine et autres vivres.</emph></head>
 							<row>
 								<cell>Item, est ordonné que oye grasse ne sera vendue oultre.</cell>
 								<cell><num>v.</num> s.</cell>
@@ -3914,9 +3904,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris de cire, acier et fer.</emph></head>
-							</row>
+							<head><emph>Le pris de cire, acier et fer.</emph></head>
 							<row>
 								<cell>Item, est ordonné que livre de cire ne sera vendue oultre.</cell>
 								<cell><num>iiii.</num> s. <num>ii.</num> d.</cell>
@@ -3967,9 +3955,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des choses necessaires à maçonnerie.</emph></head>
-							</row>
+							<head><emph>Le pris des choses necessaires à maçonnerie.</emph></head>
 							<row>
 								<cell>Item, est ordonné que pipe de chau ne sera vendue oultre.</cell>
 								<cell><num>x.</num> s.</cell>
@@ -4000,9 +3986,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des charroiz.</emph></head>
-							</row>
+							<head><emph>Le pris des charroiz.</emph></head>
 							<row>
 								<cell>Item, pour amener pipe de vin de six lieues de loing, le charretier à trois chevaulx n’aura oultre.</cell>
 								<cell><num>xxx.</num> s.</cell>
@@ -4016,9 +4000,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><pb n="388"/><emph> Le pris des chanvres, lins, toilles et fillez.</emph></head>
-							</row>
+							<head><pb n="388"/><emph> Le pris des chanvres, lins, toilles et fillez.</emph></head>
 							<row>
 								<cell>Item, est ordonné que poignée de lin ne sera vendue oultre.</cell>
 								<cell><num>xii.</num> d.</cell>
@@ -4073,9 +4055,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris de salaires des tixiers.</emph></head>
-							</row>
+							<head><emph>Le pris de salaires des tixiers.</emph></head>
 							<row>
 								<cell>Item, est ordonné que les tixiers n’auront pour aulne de toile plaine de lin, en la petite laine, oultre.</cell>
 								<cell><num>x.</num> d.</cell>
@@ -4114,9 +4094,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris de draps de laines.</emph></head>
-							</row>
+							<head><emph>Le pris de draps de laines.</emph></head>
 							<row>
 								<cell>Item, que livre de laine o le fut commune, prinse en païs de Poictou, ne sera vendue oultre.</cell>
 								<cell><num>v.</num> d.</cell>
@@ -4187,9 +4165,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des salaires des cousturiers et des tondeurs.</emph></head>
-							</row>
+							<head><emph>Le pris des salaires des cousturiers et des tondeurs.</emph></head>
 							<row>
 								<cell>Item, est ordonné que les cousturiers [pour] façon de robe double, à usaige d’omme, n’auront oultre.</cell>
 								<cell><num>x.</num> s.</cell>
@@ -4231,9 +4207,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des celliers, esperonniers, cordiers, parcheminiers et gantiers.</emph></head>
-							</row>
+							<head><emph>Le pris des celliers, esperonniers, cordiers, parcheminiers et gantiers.</emph></head>
 							<row>
 								<cell>Item, est ordonné que une bonne neuve celle, sans ouvrage de corne, garnie d’estriez et d’estrevieres, ne sera vendue oultre.</cell>
 								<cell><num>xxxv.</num> s.</cell>
@@ -4280,9 +4254,7 @@
 							</row>
 							</table>
 							<table>
-							<row cols="2">
-								<head><emph>Le pris des houstelliers.</emph></head>
-							</row>
+							<head><emph>Le pris des houstelliers.</emph></head>
 							<row>
 								<cell>Item, est ordonné que pour cheval en hostellerie qui aura toute livrée, pour jour et nuyt, et sera fourni d’un boisseau d’avoine, mesure de Poictiers, oultre.</cell>
 								<cell><num>iii.</num> s. <num>iiii.</num> d.</cell>
@@ -4297,9 +4269,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris du boys et charbon.</emph></head>
-							</row>
+							<head><emph>Le pris du boys et charbon.</emph></head>
 							<row>
 								<cell>Item, est ordonné que charretée de bois à deux beufs ne sera vendue oultre.</cell>
 								<cell><num>vi.</num> s. <num>viii.</num> d.</cell>
@@ -4341,9 +4311,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris des salaires des charpentiers, maçons et recouvreurs.</emph></head>
-							</row>
+							<head><emph>Le pris des salaires des charpentiers, maçons et recouvreurs.</emph></head>
 							<row>
 								<cell>Item, est ordonné que charpentier ou maçon en longs jours et bonne saison, sans despens, n’auront oultre.</cell>
 								<cell><num>iiii.</num> s.</cell>
@@ -4360,9 +4328,7 @@
 							</row>
 						</table>
 						<table>
-							<row cols="2">
-								<head><emph>Le pris du salaire des maneuvres et laboureurs.</emph></head>
-							</row>
+							<head><emph>Le pris du salaire des maneuvres et laboureurs.</emph></head>
 							<row>
 								<cell>Item, est ordonné que laboureurs ou maneuvres en grans jours et bonne saison, s’ilz ont despens, n’auront oultre.</cell>
 								<cell><num>xx.</num> d.</cell>
@@ -4484,7 +4450,7 @@
 							<pb n="404"/> nostre dicte regence sortir son plain effect, les dons dessus diz faiz aus diz exposans et à chascun d’eulx des diz offices, ou cas dessus dit, avons loué, ratiffié et approuvé, et en tant que mestier est confermé ; et leur avons donné et donnons de nouvel, louons, ratiffions, approuvons et confermons, de nostre plaine puissance, auctorité royal et grace especial, par ces presentes. Voulans que, se aucuns autres, par importunité de requerans ou autrement, avoient obtenu ou obtenoient lettres de nous des diz offices, que aucunement n’y soit obey, ains icelles declairons nulles et ne voulons que aient aucun effect, et que contre ceulx qui s’en vouldroient aider nostre procureur general se constitue partie et adjoingne avec les diz exposans, pour en requerir teles amendes qu’il verra à faire. Et lesquelx exposans nous avons receu et recevons, de nostre dicte grace, à opposition à l’encontre des lettres qui sur ce auroient esté et seroient obtenues. Si vous mandons et expressement enjoingnons que de nos dictes grace, approbacion et confirmacion vous faictes, souffrez et laissez les diz exposans user et joir paisiblement, sans les empescher ne souffrir estre empeschez aucunement au contraire. Car ainsi nous plaist il estre fait, de nostre grace devant dicte, par ces mesmes presentes, non obstant quelz conques lettres surreptices, impetrées ou à impetrer, à ce contraires. Donné à Bourges, le 
 							<num>iiii<hi rend="sup">e</hi></num> jour de may l’an de grace mil <num>iiii<hi rend="sup">c</hi> xxiii</num>, et de nostre regne le premier<note><p>Ces lettres ont été publiées, sous la date du 3 mai, dans la grande collection des <emph>Ordonnances des rois de France</emph>, in-fol., t. XIII, p. 26.</p></note>.</p>
 						<p>Ainsi signé : Par le roy en son conseil. M. Morchesne.</p>
-						Et au doz estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in curia Parlamenti et in registris ejusdem curie registrata, <num>xvii.</num> die maii anno Domini <num>m° cccc° xxiii°</num>. Sic signatum : Blois.</p></quote>
+						<p>Et au doz estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in curia Parlamenti et in registris ejusdem curie registrata, <num>xvii.</num> die maii anno Domini <num>m° cccc° xxiii°</num>. Sic signatum : Blois.</p></quote></p>
 						<quote type="vidime" xml:lang="lat"><p><pb n="405"/> Collacio facta est cum originali littera, reddita magistro Guillelmo Draperie, <num>xx<hi rend="sup">a</hi></num> die dicti mensis maii.</p></quote>
 					</div>
 				</body>
@@ -4550,7 +4516,7 @@
 						<p>Toutes lesquelles parties font en somme quinze cens huit marcs une once un quart d’argent blanc, pareil au pointzon de Paris, et quarante deux mars quatre onces et demie d’or de touche à dix huit caratz et huit mille neuf cens seze escuz d’or.</p>
 						<p><pb n="411"/> Desquelles sommes et parties d’or et d’argent, tant monnoyé que en vaisselle et joyaulx, et aussi des lettres et autres choses dessus dictes nous avons fait faire recepte, pour et en nostre nom, par le dit Macé Heron, et pour ce nous en tenons à contens, agreez et bien paiez, les tenons pour receues manuelment et en quictons et quicte clamons nostre dit cousin, ses hoirs et aians cause, promettans en bonne foy, pour nous et nos diz hoirs et ayans cause, sur l’obligacion aussi et ypotheque de tous noz biens et choses quelxconques, garantir, delivrer et defendre à nostre dit cousin et tenir et avoir toutes les choses dessus dictes fermes, estables et agreables à tousjours, sans jamais venir à l’encontre, et icelles faire tenir, observer et garder de point en point. Renonçans à toutes objections, oppositions et debaz, etc., parmi ce toutesvoyes que, toutes foiz et quantes fois qu’il plaira à nous, ou nos diz hoirs ou ayans cause, bailler, rendre et restituer à nostre dit cousin ou aux siens les dites sommes et marcs d’or et d’argent dessus diz ou autres semblables et de tele valeur, ainsi et par la maniere qu’elles sont cy dessus declairées, nostre dit cousin, ses hoirs ou ayans cause ne les pourront ne devront refuser, mais les seront tenuz prandre et recevoir, et par ce moyen nous laissier rendre et remettre en nostre main nos diz chastel, ville et seigneurie de Nyort, et leurs dictes appartenances, en l’estat qu’elles sont aujourd’uy, sans aler ou debatre au contraire ; et en ce cas sera du tout adnullé ce present contract. Si donnons en mandement à noz amez et feaulx gens de nostre Parlement, aux gens de noz comptes et tresoriers, au seneschal de Poictou et à tous noz autres justiciers et officiers, ou à leurs lieuxtenans, presens et advenir, et à chascun d’eulx, si comme à lui appartendra, que à nostre dit cousin ou à ses commis et deputez en ce ayans povoir souffisant de lui, mettent et instituent ou facent mettre et instituer en saisine et possession des diz chastel, ville, chastellenie, seigneurie et appartenances <pb n="412"/> de Niort, et d’icelles, ensemble de toutes les choses dessus dictes qui y pevent competer et appartenir, facent, seuffrent et laissent icelui nostre cousin, ses hoirs ou ayans cause joir et user plainement et paisiblement, comme de leur propre chose, et tout par la forme et maniere que cy dessus est contenu, sans y mettre quelque difficulté ou debat. Car ainsi nous plaist il et pour les causes que dessus le voulons estre fait. Et par raportant ces presentes ou vidimus d’icelles fait soubz seel royal ou autentique par une foiz seulement, avecques certificacion de nostre dit cousin, par laquelle appere qu’il joisse des dictes choses, nous voulons et mandons nostre receveur ordinaire de nostre dit conté de Poictou en estre et demourer quicte et deschargé, en la reddicion de ses comptes, par nos diz gens des comptes et par tout aillieurs ou mestier sera. Et afin que ce soit ferme chose et estable à tousjours, nous avons fait mettre nostre seel à ces presentes. Sauf en autres choses nostre droit et l’autrui en toutes. Donné en nostre chastel de Loches, le vint huitiesme jour du moys d’aoust l’an de grace mil <num>iiii<hi rend="sup">c</hi></num> vint et trois, et de nostre regne le premier.</p>
 						<p>Ainsi signé en la marge de dessoubz : Par le roy, l’evesque de Maillezais, le sire de Mirandol<note><p>Jean Louvet, chevalier, sire de Mirandol, conseiller et favori de Charles VII jusqu’en juillet 1425. (Voy. ci-dessus, p. 374, note 4.)</p></note> et plusieurs autres presens. J. Le Picart. Visa.</p>
-						Et au doz d’icelles estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in Parlamento regio, vicesima septima die julii anno Domini millesimo <num>cccc<hi rend="sup">mo</hi> xxiiii°</num>. Blois.</p></quote>
+						<p>Et au doz d’icelles estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in Parlamento regio, vicesima septima die julii anno Domini millesimo <num>cccc<hi rend="sup">mo</hi> xxiiii°</num>. Blois.</p></quote></p>
 						<quote type="vidime" xml:lang="lat"><p>Collacio facta est cum originalibus literis.</p></quote>
 					</div>
 				</body>
@@ -4574,7 +4540,7 @@
           </div>
 					<index>
             <term type="auth_type" key="act_souv"/>
-						<term typ="act_type" key="confirmation"/>
+						<term type="act_type" key="confirmation"/>
           </index>
         </front>						
         <body>
@@ -4641,7 +4607,7 @@
 					<div type="transcription" xml:lang="fro">			
 						<p>Charles, par la grace de Dieu roy de France. A noz amez et feaulx conseillers les gens tenans et qui tendront nostre Parlement à Poictiers, les maistres des requestes de nostre hostel, au bailli des ressors et Exempcions de Touraine, d’Anjou et du Maine, et à tous noz autres justiciers, ou à leurs lieux tenans, salut et dilection. Nous vous mandons et estroictement enjoignons, et à chescun de vous, si comme à lui appartendra, que toutes les causes et quereles meues et à mouvoir, debtes, besoignes, possessions et biens quelxconques de nostre amé et feal chevalier, Jehan Chauvereau, seigneur de Pampelie<note><p>Jean Chauvereau, d’une famille noble de la Gâtine, était fils de Pierre Chauvereau, chevalier, seigneur de Pamplie, et de Jeanne d’Appelvoisin. Il avait servi sous les ordres de Gilles d’Appelvoisin, qui commandait à Parthenay, en 1419, lors du siège soutenu par cette ville contre les troupes du dauphin Charles, comte de Poitou. (Cf. Beauchet-Filleau, <emph>Dict. des familles du Poitou</emph>, nouv. édit., t. II, p. 345.) Dans un aveu de Pamplie par lui rendu, le 1<hi rend="sup">er</hi> décembre 1445, au connétable de Richemont, comme seigneur de Parthenay, il désigne ce fief en ces termes : « Mon lieu, tour et herbergement de Pampellie, assis près de l’église de Pampellie ». (Arch. nat., R<hi rend="sup">1*</hi> 190, fol. 200.) Le même registre nous apprend que Jean Chauvereau possédait en outre, dans la mouvance de Parthenay, une borderie de terre appelée la Gendronnière, sise dans les paroisses d’Alonne et de Pamplie, les terceries de Maintrolle, mouvant de Champdeniers, le fief des Groies et différentes choses à Champdeniers, une rente fieffée de six livres à Parthenay, ayant appartenu auparavant à Aimery Marteau, etc. (<emph>Id.</emph>, fol. 245 v°, 259, 262, 275 v°.) Il était aussi seigneur de plusieurs arrière-fiefs de la baronnie de Bressuire, tels que l’Ysambardière en Chanteloup, relevant de la Beau-Regnault, quinze borderies de terre en Moncoutant et le Breuil Bernard, la Peleterie en Moncoutant. (Ledain, <emph>Histoire de Bressuire</emph>, p. 399, 414, 415.) Les registres du Parlement fournissent quelques renseignements supplémentaires sur ce Jean Chauvereau. En 1415-1416, il était en procès contre Jean Vignaud, prévôt et chanoine de l’église de Poitiers, secrétaire du duc de Berry, à raison de la possession et saisine de l’église paroissiale de Cuhon, au diocèse de Poitiers. (Ajournement du 22 janvier 1416 n.s., X<hi rend="sup">1a</hi> 61, fol. 81 v°.) Plus tard, mécontent d’une sentence donnée contre lui par le lieutenant du sénéchal de Poitou, en faveur de Jean Odart, écuyer, et d’Yolande du Retail, sa femme, il interjeta appel au Parlement, mais après les délais réglementaires, si bien qu’il fut déclaré non recevable et condamné à l’amende par arrêt du 16 avril 1432. (X<hi rend="sup">1a</hi> 9192, fol. 278.) L’année suivante, Chauvereau était en instance devant la cour ordinaire du sénéchal de Poitou à Poitiers, contre son parent maternel Gilles d’Appelvoisin, chevalier. Ce dernier étant mort au cours du procès, son frère et principal héritier, Jacques d’Appelvoisin, se porta partie en son nom. A une audience, après avoir argué de faux un acte présenté par Jean Chauvereau à l’appui de sa demande « en nouvelleté », le procureur de Jacques dut avouer que cette pièce contenait la vérité. Le lieutenant du sénéchal rendit sur cet incident un jugement condamnant d’Appelvoisin à l’amende. Celui-ci en appela au Parlement (1434) et l’affaire traîna. Enfin les parties se mirent d’accord pour que la cause d’appel fût mise à néant sans amende ni dépens et que le fond de l’affaire fût renvoyé devant le sénéchal de Poitou, au troisième jour des prochaines assises de Poitiers. Cette transaction est datée du 31 août 1436. (X<hi rend="sup">1c</hi> 152.)</p></note>, lequel est monté et armé <pb n="418"/> souffisanment pour nous servir soubz et en la compaignie de nostre amé et feal chevalier, Jehan de Torsay, seigneur de Lezay, maistre des arbalestriers de France<note><p>Cf. la longue notice consacrée à ce personnage, ci-dessus, p. 242.</p></note>, et lieutenant, vous faites tenir en estat, du jour de la date de ces presentes jusques à la feste saint Michiel prouchaine venant. Et ce pendant ne faites ou souffrez aucune chose <pb n="419"/> faire, attempter ou innover, ainçois, s’aucune chose estoit faicte, attemptée ou innovée au contraire, si la remenez et mettez ou faites ramener et mettre, chescun en droit soy, tantost et sans delay, au premier estat et deu. Car ainsi nous plait il estre fait. Donné à Poictiers, le <num>xiii<hi rend="sup">e</hi></num> jour de juillet l’an de grace mil <num>cccc.</num> vint et quatre, et de nostre regne le second.</p>
 						<p>Ainsi soubscriptes : Par le conseil, et signeez J. de Caours.</p>
-						Et au dox d’icelles estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in Parlamento, vicesima die julii anno Domini <num>m° cccc<hi rend="sup">mo</hi></num> <num>xxiiii.</num> Blois.</p></quote>
+						<p>Et au dox d’icelles estoit escript : <quote type="vidime" xml:lang="lat"><p>Lecta et publicata Pictavis in Parlamento, vicesima die julii anno Domini <num>m° cccc<hi rend="sup">mo</hi></num> <num>xxiiii.</num> Blois.</p></quote></p>
 						<quote type="vidime" xml:lang="lat"><p>Collacio facta est cum literis originalibus.</p></quote>
 					</div>
 				</body>

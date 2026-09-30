@@ -15,9 +15,9 @@
             <extent/>
             <!-- ajouter les stats sur le fichier source -->
             <publicationStmt>
+                <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
                 <date>2015</date>
                 <idno>http://elec.enc.sorbonne.fr/actesroyauxdupoitou/</idno>
-                <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
                 <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
