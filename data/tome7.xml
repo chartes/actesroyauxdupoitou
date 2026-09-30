@@ -61,7 +61,7 @@
       <sourceDesc>
         <bibl>
           <abbr>Paul Guérin (éd.)</abbr>
-          <author>Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
+          <author ref="https://www.wikidata.org/wiki/Q34639346 https://data.bnf.fr/fr/ark:/12148/cb12382835z https://www.idref.fr/032885288">Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
             Chancellerie de France</title>, t. VII : <hi rend="i">1403-1430</hi>, Paris, 1896 (Archives historiques du Poitou, 26).
         </bibl>
       </sourceDesc>
@@ -72,8 +72,11 @@
           (BnF).</p>
       </projectDesc>
       <refsDecl>
+        <citeStructure unit="introduction" match="//front/div[@type='introduction']" use="@xml:id">
+          <citeData property="dct:title" use="normalize-space(string((head)[1]))"/>
+        </citeStructure>
         <citeStructure unit="acte" match="//group/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(concat(front/docDate/date, ' — ', front/argument))"/>
+          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), ' (', string-join(front/docDate/date, ', '), ')'))"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>

@@ -65,7 +65,7 @@
       <sourceDesc>
         <bibl>
           <abbr>Paul Guérin (éd.)</abbr>
-          <author>Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
+          <author ref="https://www.wikidata.org/wiki/Q34639346 https://data.bnf.fr/fr/ark:/12148/cb12382835z https://www.idref.fr/032885288">Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
             Chancellerie de France</title>, t. VI : <hi rend="i">1390-1403</hi>, Paris, 1893 (Archives historiques du Poitou, 24).
         </bibl>
       </sourceDesc>
@@ -76,8 +76,11 @@
           (BnF).</p>
       </projectDesc>
       <refsDecl>
+        <citeStructure unit="introduction" match="//front/div[@type='introduction']" use="@xml:id">
+          <citeData property="dct:title" use="normalize-space(string((head)[1]))"/>
+        </citeStructure>
         <citeStructure unit="acte" match="//group/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(concat(front/docDate/date, ' — ', front/argument))"/>
+          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), ' (', string-join(front/docDate/date, ', '), ')'))"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -90,7 +93,7 @@
       <head>Recueil des documents concernant le Poitou contenus dans les registres de la
         Chancellerie de France publiés par Paul Guérin, archiviste aux archives nationales, VI,
         (1390-1403)</head>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-1">
         <head>introduction</head>
         <p>Les lettres de rémission prennent une place de plus en plus importante dans notre
           publication. On peut se rendre un compte exact de cette progression. Tandis que le premier
@@ -102,7 +105,7 @@
           rémission, envisagées comme actes de la grande chancellerie, sans nous livrer toutefois à
           un examen approfondi de toutes les particularités que l'on y pourrait signaler.</p>
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-2">
         <head>I</head>
         <p>Ce qui constitue le caractère particulier et le principal intérêt de ces lettres, c'est
           qu'elles reproduisent exactement la requête adressée au conseil du roi par l'accusé, ses
@@ -337,7 +340,7 @@
           jours après, le 21, il fit exécuter à mort les deux meurtriers<note>Arch.
             nat., X<hi rend="sup">2A</hi> 21, aux dates.</note>.</p>
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-3">
         <head>II</head>
         <p>Nous avons montré, dans l'introduction du précédent volume, l'intérêt qu'offrent souvent
           pour l'histoire proprement dite les lettres de rémission, et relevé les principaux
@@ -503,7 +506,7 @@
           saisie de l'affaire, était en train de faire expier chèrement à son auteur ce mouvement de
           vivacité, quand intervint la grâce royale (p. 362-364).</p>
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-4">
         <head>III</head>
         <p>Les rémissions octroyées à des gentilshommes sont nombreuses dans ce volume. On doit
           constater qu'elles visent généralement des faits graves de violence contre les personnes.
@@ -687,7 +690,7 @@
           d'exécuter un jugement d'amende, avait fait usage de ses armes et blessé mortellement son
           adversaire (p. 427).</p>
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-5">
         <head>IV</head>
         <p>Après les faits qui viennent d'être exposés, on ne peut s'attendre à trouver plus polies
           ou plus douces les mœurs de la moyenne et de la basse classe, bourgeois, gens de métiers

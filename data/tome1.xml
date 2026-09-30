@@ -64,7 +64,7 @@
       <sourceDesc>
         <bibl>
           <abbr>Paul Guérin (éd.)</abbr>
-          <author>Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus
+          <author ref="https://www.wikidata.org/wiki/Q34639346 https://data.bnf.fr/fr/ark:/12148/cb12382835z https://www.idref.fr/032885288">Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus
             dans les registres de la Chancellerie de France</title>, t. I : <hi rend="i">1302-1333</hi>, Paris, 1881 (Archives historiques du Poitou, 11). </bibl>
       </sourceDesc>
     </fileDesc>
@@ -74,8 +74,11 @@
           (BnF).</p>
       </projectDesc>
       <refsDecl>
+        <citeStructure unit="introduction" match="//front/div[@type='introduction']" use="@xml:id">
+          <citeData property="dct:title" use="normalize-space(string((head)[1]))"/>
+        </citeStructure>
         <citeStructure unit="acte" match="//group/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(concat(front/docDate/date, ' — ', front/argument))"/>
+          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), ' (', string-join(front/docDate/date, ', '), ')'))"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -88,7 +91,7 @@
       <head>Recueil des documents concernant le Poitou contenus dans les registres de la
         Chancellerie de France publiés par Paul Guérin, archiviste aux archives nationales, I,
         (1302-1333)</head>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-1">
         <head>AVANT-PROPOS</head>
         <p>Il n'est peut-être point de source historique qui ait été aussi fréquemment mise à
           contribution que les registres du Trésor des Chartes. Et cependant, après avoir fourni,
@@ -140,7 +143,7 @@
           certainement pas la série la plus nombreuse, mais Tintérêt – XV – historique qui s'y
           attache compense suffisamment ce qui leur manque du côté de l'importance matérielles.</p>
         </div>
-	<div type="introduction" subtype="article">
+	<div type="introduction" subtype="article" xml:id="introduction-2">
           <head>I</head>
           <p>Depuis la mort d'Àlfonse, frère de saint Louis (21 août 1271), le Poitou, réuni au
             domaine de la couronne, formait une des grandes circonscriptions administratives du
@@ -219,7 +222,7 @@
             personnages qui ont occupé ces hautes fontions ; il n'était pas utile de les reproduire
             ici.</p>
         </div>
-        <div type="introduction" subtype="article">
+        <div type="introduction" subtype="article" xml:id="introduction-3">
           <head>II</head>
           <p>Personne n'ignore que le Poitou, ancien domaine du frère de saint Louis, fut de nouveau
             détaché de la couronne et donné en apanage au second fils de. Philippe le Bel. On est
@@ -320,7 +323,7 @@
             Guy de Bauçay <note n="13" type="footnote">Par lettres données à Paris le 16 janvier
               13lf (n. s.), no L VIL</note>.</p>
         </div>
-        <div type="introduction" subtype="article">
+        <div type="introduction" subtype="article" xml:id="introduction-4">
           <head>III</head>
           <p>Ce n'était pas du reste la première fois que le Poitou recevait une semblable visité.
             Le règne de Philippe le Bel fut signalé par de fréquents envois de commissaires
@@ -465,7 +468,7 @@
             recevoir ici le témoignage de notre reconnaissance.</p>
         </div>
       
-      <div type="introduction"  subtype="article">
+      <div type="introduction"  subtype="article" xml:id="introduction-5">
         <head>ACTES ANTÉRIEURS AU XIVe SIÈCLE PUBLIÉS DANS CE VOLUME<note n="19" type="footnote">ll
             nous a semblé qu'il pouvait y avoir quelque utilité à dresser un tableau des actes
             antérieurs que Ton trouve intercalés dans des vidimus ou des lettres de confirmation du

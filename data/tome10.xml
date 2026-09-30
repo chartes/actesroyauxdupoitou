@@ -65,7 +65,7 @@
       <sourceDesc>
         <bibl>
           <abbr>Paul Guérin (éd.)</abbr>
-          <author>Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
+          <author ref="https://www.wikidata.org/wiki/Q34639346 https://data.bnf.fr/fr/ark:/12148/cb12382835z https://www.idref.fr/032885288">Paul Guérin</author>, <title>Recueil des documents concernant le Poitou contenus dans les registres de la
             Chancellerie de France</title>, t. X : <hi rend="i">1456-1464</hi>, Paris, 1906 (Archives historiques du Poitou, 35).
         </bibl>
       </sourceDesc>
@@ -75,8 +75,11 @@
         <p>Ce fichier est issu d'une numérisation OCR par l'école des chartes d'un PDF Gallica (BnF).</p>
       </projectDesc>
       <refsDecl>
+        <citeStructure unit="introduction" match="//front/div[@type='introduction']" use="@xml:id">
+          <citeData property="dct:title" use="normalize-space(string((head)[1]))"/>
+        </citeStructure>
         <citeStructure unit="acte" match="//group/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(concat(front/docDate/date, ' — ', front/argument))"/>
+          <citeData property="dct:title" use="normalize-space(concat(string-join(front/head//text()[not(ancestor::note)], ''), ' (', string-join(front/docDate/date, ', '), ')'))"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -89,7 +92,7 @@
       <head>Recueil des documents concernant le Poitoux contenus dans les registres de la
         Chancellerie de France publiés par Paul Guérin, archiviste aux archives nationales, X,
         (1456-1464)</head>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-1">
         <head>Introduction</head>
         <p>Le tome X des documents concernant le Poitou recueillis dans
           les registres du Trésor des chartes contient les actes des cinq
@@ -100,7 +103,7 @@
           ces actes en diverses catégories que nous allons passer rapidement en revue, en indiquant sommairement, pour chacune, ce que
           l'on y trouve de plus important.</p>        
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-2">
         <head>I</head>
         <p>Les lettres de rémission continuent à occuper une place prépondérante ; prises dans leur ensemble, on peut dire que leur
           caractère essentiel ne diffère pas sensiblement de ce qui a été
@@ -403,7 +406,7 @@
           quatre actes signés de lui, les 16, 20, 22 et 24 mars. Le 28, il était
           à Saumur, où il résida jusqu'au 18 avril.</p>
       </div>
-      <div type="introduction" subtype="article">
+      <div type="introduction" subtype="article" xml:id="introduction-3">
         <head>II</head>        
         <p>Nous avons réservé pour être placés ici les développements que
           comporte l'examen critique d'un attentat particulièrement dramatique et odieux, parmi tant d'autres qui accusent les mœurs déplorables de l'époque. Neuf lettres de rémission obtenues par les
