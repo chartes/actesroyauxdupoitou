@@ -157,6 +157,38 @@
   <!-- D5-FIN -->
 
   <!--
+    Page de garde d'un tome (2026-09-30).
+    1. L'ancienne adresse de l'edition sur l'ELEC (publicationStmt/idno
+       http://elec.enc.sorbonne.fr/actesroyauxdupoitou/) n'est plus affichee :
+       le site est ferme. hteiml l'imprime dans un div.idno suivi d'un point,
+       fabrique dans son modele publicationStmt ; on rend donc une copie de
+       l'en-tete sans cet idno, que hteiml traite ensuite normalement.
+    2. La licence (availability/licence/@target) est nommee en clair au lieu
+       du « license cc » generique de hteiml.
+  -->
+  <xsl:variable name="arp-idno-elec" select="'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/'"/>
+
+  <xsl:template match="tei:teiHeader[tei:fileDesc/tei:publicationStmt/tei:idno[normalize-space(.) = $arp-idno-elec]]" priority="30">
+    <xsl:variable name="copie">
+      <xsl:apply-templates select="." mode="arp-sans-elec"/>
+    </xsl:variable>
+    <xsl:apply-templates select="$copie/tei:teiHeader"/>
+  </xsl:template>
+  <xsl:template match="@* | node()" mode="arp-sans-elec">
+    <xsl:copy><xsl:apply-templates select="@* | node()" mode="arp-sans-elec"/></xsl:copy>
+  </xsl:template>
+  <xsl:template match="tei:publicationStmt/tei:idno[normalize-space(.) = $arp-idno-elec]" mode="arp-sans-elec"/>
+
+  <xsl:template match="tei:licence/@target">
+    <a class="licence" href="{.}">
+      <xsl:choose>
+        <xsl:when test="contains(., 'by-nc-nd/2.0/fr')">Licence Creative Commons BY-NC-ND 2.0 France</xsl:when>
+        <xsl:otherwise>Licence</xsl:otherwise>
+      </xsl:choose>
+    </a>
+  </xsl:template>
+
+  <!--
     Page de depart d'un acte (2026-09-30). DoTS sert chaque acte seul : le
     dernier <pb> qui le precede reste dans l'acte d'avant, et la page de
     l'edition imprimee ou il commence n'etait plus affichee (l'ELEC, qui
