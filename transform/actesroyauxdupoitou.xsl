@@ -78,14 +78,30 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Bloc des notes en pied (2026-10-02) : un seul modele pour les deux cas (porteur
+       present / notes enfants du wrapper), qui en avaient deux copies. Plus de styles en
+       dur : couleurs, filet et corps sont dans la CSS du corpus (section.footnotes,
+       aside.note, a.noteref, a.noteback). -->
+  <xsl:template name="actes-notes-pied">
+    <xsl:param name="notes"/>
+    <section class="footnotes">
+      <xsl:for-each select="$notes">
+        <aside class="note" id="fn-{generate-id()}">
+          <a class="noteback" href="#fn-{generate-id()}-ref"><sup><xsl:call-template name="actes-note-n"/></sup></a>
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates/>
+        </aside>
+      </xsl:for-each>
+    </section>
+  </xsl:template>
+
   <!-- appel de note (inline) -->
   <!-- Infobulle (2026-09-30) : le texte de la note dans @title de l'appel, comme
        sur le site Corpus historique (a.refnote title="1 Guillaume VI, …"). -->
   <xsl:template match="tei:note[@type = 'footnote' or @type = 'a' or not(@type)]" priority="10">
     <xsl:variable name="n"><xsl:call-template name="actes-note-n"/></xsl:variable>
     <a class="noteref" id="fn-{generate-id()}-ref" href="#fn-{generate-id()}"
-       title="{normalize-space(concat($n, ' ', .))}"
-       style="text-decoration:none;color:#a73136;font-weight:bold"><sup><xsl:value-of select="$n"/></sup></a>
+       title="{normalize-space(concat($n, ' ', .))}"><sup><xsl:value-of select="$n"/></sup></a>
   </xsl:template>
 
   <!-- deport des corps en pied de chaque acte / division d'introduction -->
@@ -93,15 +109,9 @@
     <xsl:apply-imports/>
     <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)]"/>
     <xsl:if test="$notes">
-      <section class="footnotes" style="margin:1.2rem 0 0;padding-top:.7rem;border-top:1px solid #d7d1ca;font-size:.9rem;color:#333">
-        <xsl:for-each select="$notes">
-          <aside class="note" id="fn-{generate-id()}" style="margin:.35rem 0;line-height:1.45">
-            <a class="noteback" href="#fn-{generate-id()}-ref" style="text-decoration:none;color:#a73136;font-weight:bold"><sup><xsl:call-template name="actes-note-n"/></sup></a>
-            <xsl:text> </xsl:text>
-            <xsl:apply-templates/>
-          </aside>
-        </xsl:for-each>
-      </section>
+      <xsl:call-template name="actes-notes-pied">
+        <xsl:with-param name="notes" select="$notes"/>
+      </xsl:call-template>
     </xsl:if>
   </xsl:template>
 
@@ -129,15 +139,9 @@
   <xsl:template match="*[local-name() = 'wrapper'][.//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]]" priority="11">
     <xsl:apply-imports/>
     <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]"/>
-    <section class="footnotes" style="margin:1.2rem 0 0;padding-top:.7rem;border-top:1px solid #d7d1ca;font-size:.9rem;color:#333">
-      <xsl:for-each select="$notes">
-        <aside class="note" id="fn-{generate-id()}" style="margin:.35rem 0;line-height:1.45">
-          <a class="noteback" href="#fn-{generate-id()}-ref" style="text-decoration:none;color:#a73136;font-weight:bold"><sup><xsl:call-template name="actes-note-n"/></sup></a>
-          <xsl:text> </xsl:text>
-          <xsl:apply-templates/>
-        </aside>
-      </xsl:for-each>
-    </section>
+    <xsl:call-template name="actes-notes-pied">
+      <xsl:with-param name="notes" select="$notes"/>
+    </xsl:call-template>
   </xsl:template>
 
   <!-- D5-DEBUT (autopilote 2026-09-12) : liens vers les anciens sites ELEC -->
