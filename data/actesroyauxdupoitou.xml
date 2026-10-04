@@ -119,6 +119,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
+      <change when="2026-10-04">Documentation : liens du Vocabulaire international de la diplomatique transposés vers son adresse actuelle (http://www.cei.lmu.de/VID/VID.php?N → https://www.cei.lmu.de/VID/?N, intitulés vérifiés) ; ?196 (préambule), ?345 (esn) et #7 laissés : la page visée ne correspond plus ou n'est pas confirmée.</change>
       <change when="2026-10-04">listBibl : @source des volumes imprimés numérisés (Gallica pour le t. I, Internet Archive pour les t. I, III à VI, VIII, IX, XI et XII ; adresses vérifiées en ligne) ; t. II, VII et X sans numérisation trouvée, sans @source.</change>
       <change when="2026-10-04">profileDesc : période des actes (1302-1483) et langues déclarées, d'après les xml:lang du texte (fro, lat) et l'apparat en français.</change>
       <change when="2026-09-30">Réunion des douze fichiers (un par tome) en un seul document : en-tête commun, textes d'accompagnement (présentation, documentation du site Corpus) et tomes en parties du sommaire. Le contenu des actes et des introductions est inchangé.</change>
@@ -389,17 +390,17 @@
                   </table>
                   <p>Définitions <ref target="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</ref> (G. Vogeler), pour chaque valeur de <att>function</att> :</p>
                   <list>
-                    <item><hi rend="i">invocation</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?185">No. 185</ref></item>
-                    <item><hi rend="i">intitulatio</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?187">No. 187</ref></item>
-                    <item><hi rend="i">address</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?192">No. 192</ref></item>
-                    <item><hi rend="i">salutatio</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?194">No. 194</ref></item>
-                    <item><hi rend="i">notification</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?notification">No. 196b</ref></item>
+                    <item><hi rend="i">invocation</hi>, <ref target="https://www.cei.lmu.de/VID/?185">No. 185</ref></item>
+                    <item><hi rend="i">intitulatio</hi>, <ref target="https://www.cei.lmu.de/VID/?187">No. 187</ref></item>
+                    <item><hi rend="i">address</hi>, <ref target="https://www.cei.lmu.de/VID/?192">No. 192</ref></item>
+                    <item><hi rend="i">salutatio</hi>, <ref target="https://www.cei.lmu.de/VID/?194">No. 194</ref></item>
+                    <item><hi rend="i">notification</hi>, <ref target="https://www.cei.lmu.de/VID/?notification">No. 196b</ref></item>
                     <item><hi rend="i">preamble</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?196">No. 196</ref></item>
-                    <item><hi rend="i">corroboration</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?246">No. 246</ref></item>
-                    <item><hi rend="i">witnessList</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?263">No. 263</ref></item>
-                    <item><hi rend="i">dating</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?561">No. 561</ref></item>
-                    <item><hi rend="i">apprecatio</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?251">No. 251</ref></item>
-                    <item><hi rend="i">subscriptions</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?254">No. 254</ref></item>
+                    <item><hi rend="i">corroboration</hi>, <ref target="https://www.cei.lmu.de/VID/?246">No. 246</ref></item>
+                    <item><hi rend="i">witnessList</hi>, <ref target="https://www.cei.lmu.de/VID/?263">No. 263</ref></item>
+                    <item><hi rend="i">dating</hi>, <ref target="https://www.cei.lmu.de/VID/?561">No. 561</ref></item>
+                    <item><hi rend="i">apprecatio</hi>, <ref target="https://www.cei.lmu.de/VID/?251">No. 251</ref></item>
+                    <item><hi rend="i">subscriptions</hi>, <ref target="https://www.cei.lmu.de/VID/?254">No. 254</ref></item>
                     <item><hi rend="i">esn</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?345">No. 180</ref></item>
                   </list>
                 </div>
@@ -419,7 +420,7 @@
                   </table>
                   <p>Définitions <ref target="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</ref> (G. Vogeler), pour chaque valeur de <att>function</att> :</p>
                   <list>
-                    <item><hi rend="i">dispositio</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?198">No. 198</ref></item>
+                    <item><hi rend="i">dispositio</hi>, <ref target="https://www.cei.lmu.de/VID/?198">No. 198</ref></item>
                   </list>
                 </div>
                 <div type="element" xml:id="doc-el_seg_3">
@@ -444,10 +445,10 @@
                     </table>
                     <p>Définitions <ref target="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</ref> (G. Vogeler), pour chaque valeur de <att>function</att> :</p>
                     <list>
-                      <item><hi rend="i">beneficiary</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?17">No. 17</ref></item>
-                      <item><hi rend="i">verb</hi>, pas de terme identifié dans le VID, mentionné pourtant dans la documentation du terme <ref target="http://www.cei.lmu.de/VID/VID.php?198">No. 198</ref> (dispositif).</item>
-                      <item><hi rend="i">donatio</hi>, le terme donation existe en tant que type d'acte (<ref target="http://www.cei.lmu.de/VID/VID.php?425">No. 425</ref>) mais pas en tant que partie du discours.</item>
-                      <item><hi rend="i">clauses</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?205">No. 205</ref></item>
+                      <item><hi rend="i">beneficiary</hi>, <ref target="https://www.cei.lmu.de/VID/?17">No. 17</ref></item>
+                      <item><hi rend="i">verb</hi>, pas de terme identifié dans le VID, mentionné pourtant dans la documentation du terme <ref target="https://www.cei.lmu.de/VID/?198">No. 198</ref> (dispositif).</item>
+                      <item><hi rend="i">donatio</hi>, le terme donation existe en tant que type d'acte (<ref target="https://www.cei.lmu.de/VID/?425">No. 425</ref>) mais pas en tant que partie du discours.</item>
+                      <item><hi rend="i">clauses</hi>, <ref target="https://www.cei.lmu.de/VID/?205">No. 205</ref></item>
                     </list>
                   </div>
                 </div>
@@ -456,7 +457,7 @@
                 <head><gi>seg</gi> <att>function</att>="<val>narratio</val>"</head>
                 <p>L'exposé (narratio) peut contenir un acte vidimé.<lb/>Définitions <ref target="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</ref> (G. Vogeler), pour chaque valeur de <att>function</att> :</p>
                 <list>
-                  <item><hi rend="i">narratio</hi>, <ref target="http://www.cei.lmu.de/VID/VID.php?197">No. 197</ref></item>
+                  <item><hi rend="i">narratio</hi>, <ref target="https://www.cei.lmu.de/VID/?197">No. 197</ref></item>
                 </list>
                 <table rend="grammar">
                   <row><cell role="label">Attributs</cell><cell><ref target="#doc-el_seg-narratio"><att>function</att>="<val>narratio</val>"</ref></cell></row>
