@@ -1,4 +1,4 @@
-# Actes royaux du Poitou (1302-1464)
+# Actes royaux du Poitou (1302-1483)
 
 Édition électronique du *Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France*, publié par Paul Guérin, en 12 tomes. Ce dépôt en est la version préparée pour DoTS (branche `migration`).
 

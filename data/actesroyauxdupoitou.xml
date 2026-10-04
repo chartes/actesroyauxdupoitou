@@ -110,7 +110,16 @@
         </citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation><date from="1302" to="1483">1302-1483</date></creation>
+      <langUsage>
+        <language ident="fro">ancien français</language>
+        <language ident="lat">latin</language>
+        <language ident="fr">français</language>
+      </langUsage>
+    </profileDesc>
     <revisionDesc>
+      <change when="2026-10-04">profileDesc : période des actes (1302-1483) et langues déclarées, d'après les xml:lang du texte (fro, lat) et l'apparat en français.</change>
       <change when="2026-09-30">Réunion des douze fichiers (un par tome) en un seul document : en-tête commun, textes d'accompagnement (présentation, documentation du site Corpus) et tomes en parties du sommaire. Le contenu des actes et des introductions est inchangé.</change>
       <change when="2026-09">Préparation pour DoTS des douze fichiers : unités citables, autorités, licence, titres de tableaux, page de départ des actes, conformité TEI (voir le README et l'historique du dépôt).</change>
       <change when="2015-03" who="#MH">Tome XII : création du fichier.</change>
