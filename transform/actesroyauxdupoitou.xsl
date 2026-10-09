@@ -8,34 +8,17 @@
   <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
 
+  <!-- 2026-10-08 : page de garde generique (modele Montferrand), commune a tous les corpus.
+       Remplace la garde propre a ce corpus (teiHeader rendu en entier, corps masque).
+       Sauvegarde : dossier chantier/garde2, fichier arp_avant_garde_commun.xsl. -->
+  <xsl:include href="garde.xsl"/>
+
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
 
   <xsl:template match="*[local-name() = 'x']" mode="a" priority="20">
     <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
-
-  <!--
-    Page de garde a la racine (meme correctif que chroniqueslatines.xsl) :
-
-    DoTS Vue charge le document complet a la racine (Document.vue, currentLevel=0).
-    Ce rendu contient le <teiHeader> (page de garde produite par teiHeader2html.xsl)
-    PUIS tout le corps (les actes). Sans correctif, la page de titre s'affiche puis
-    le corps entier la recouvre.
-
-    On neutralise le corps <text> UNIQUEMENT quand le teiHeader est present, c.-a-d.
-    au rendu du document entier (la racine). Les fragments (un acte) sont transformes
-    isolement dans un <dts:wrapper> SANS teiHeader : ils ne sont pas touches.
-    Priorite 15 pour dominer proprement les templates priorite 10 ci-dessous.
-  -->
-  <!-- Cas 1 : rendu du TEI complet (racine) : masquer le corps <text>. -->
-  <xsl:template match="tei:text[//tei:teiHeader]" priority="15"/>
-
-  <!-- Cas 2 : contenu servi dans un <dts:wrapper> embarquant le teiHeader
-       (rendu racine via excludeFragments) : ne produire que la page de garde. -->
-  <xsl:template match="*[local-name() = 'wrapper'][tei:teiHeader]" priority="20">
-    <xsl:apply-templates select="tei:teiHeader"/>
   </xsl:template>
 
   <!--
@@ -137,7 +120,7 @@
     excludeFragments il se comporte comme avant.
   -->
   <xsl:template match="*[local-name() = 'wrapper'][.//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]]" priority="11">
-    <xsl:apply-imports/>
+    <xsl:apply-templates/>
     <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]"/>
     <xsl:call-template name="actes-notes-pied">
       <xsl:with-param name="notes" select="$notes"/>
@@ -159,29 +142,6 @@
     <a class="title d5-local" href="/"><xsl:apply-templates/></a>
   </xsl:template>
   <!-- D5-FIN -->
-
-  <!--
-    Page de garde d'un tome (2026-09-30).
-    1. L'ancienne adresse de l'edition sur l'ELEC (publicationStmt/idno
-       http://elec.enc.sorbonne.fr/actesroyauxdupoitou/) n'est plus affichee :
-       le site est ferme. hteiml l'imprime dans un div.idno suivi d'un point,
-       fabrique dans son modele publicationStmt ; on rend donc une copie de
-       l'en-tete sans cet idno, que hteiml traite ensuite normalement.
-    2. La licence (availability/licence/@target) est nommee en clair au lieu
-       du « license cc » generique de hteiml.
-  -->
-  <xsl:variable name="arp-idno-elec" select="'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/'"/>
-
-  <xsl:template match="tei:teiHeader[tei:fileDesc/tei:publicationStmt/tei:idno[normalize-space(.) = $arp-idno-elec]]" priority="30">
-    <xsl:variable name="copie">
-      <xsl:apply-templates select="." mode="arp-sans-elec"/>
-    </xsl:variable>
-    <xsl:apply-templates select="$copie/tei:teiHeader"/>
-  </xsl:template>
-  <xsl:template match="@* | node()" mode="arp-sans-elec">
-    <xsl:copy><xsl:apply-templates select="@* | node()" mode="arp-sans-elec"/></xsl:copy>
-  </xsl:template>
-  <xsl:template match="tei:publicationStmt/tei:idno[normalize-space(.) = $arp-idno-elec]" mode="arp-sans-elec"/>
 
   <xsl:template match="tei:licence/@target">
     <a class="licence" href="{.}">
@@ -223,6 +183,86 @@
       <xsl:apply-templates select="tei:front/tei:head"/>
       <xsl:apply-templates select="tei:front/tei:div[@type = 'volume']"/>
     </header>
+  </xsl:template>
+
+  <!-- ===== HTEIML RESPONSIVE (2026-10-08) : corrections de compatibilite =====
+       La branche responsive de hteiml ne traverse pas dts:wrapper (elle le rend en
+       marque d'erreur), ne donne pas la cartouche d'acte pour un fragment, ne garde
+       pas les blancs contenant un saut de ligne entre deux noeuds (DoTS-vue colle
+       les mots), et produit un signet « § » a href vide quand un titre n'a pas de div. -->
+
+  <!-- DoTS sert certains fragments dans un conteneur dts:wrapper : on le traverse. -->
+  <xsl:template match="*[local-name() = 'wrapper']" priority="10">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <!-- Cartouche d'entete d'acte dans un fragment (dts:wrapper/text/front) : <header class="front">,
+       comme la generique du tei2html local ; la responsive ne couvre que le cas group/text/front. -->
+  <xsl:template match="*[local-name() = 'wrapper']/tei:text/tei:front" priority="10">
+    <header class="front">
+      <xsl:call-template name="atts"/>
+      <xsl:apply-templates/>
+      <xsl:apply-templates select=".//tei:witness[@ana='edited']" mode="according"/>
+    </header>
+  </xsl:template>
+
+  <!-- Blanc contenant un saut de ligne entre deux noeuds : une espace simple (DoTS-vue
+       compile le HTML en « condense », qui colle sinon les mots). Meme regle que le hteiml local. -->
+  <xsl:template match="text()[not(normalize-space())][contains(., '&#10;')]
+      [preceding-sibling::node()][following-sibling::node()]
+      [not(../tei:w) or not(following-sibling::*[1][self::tei:w or self::tei:pc])]
+      [not(parent::tei:choice or parent::tei:app or parent::tei:subst or parent::tei:table or parent::tei:row
+           or parent::tei:list or parent::tei:listBibl)]">
+    <xsl:text> </xsl:text>
+  </xsl:template>
+
+  <!-- Titre hors division (titre d'acte, de tome) : meme rendu que la responsive, sans signet
+       quand il n'y a pas de division a laquelle renvoyer (href vide = retour a l'accueil dans DoTS-vue). -->
+  <xsl:template match="tei:head[not(ancestor::tei:div)]" priority="3">
+    <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
+    <xsl:variable name="name">
+      <xsl:choose>
+        <xsl:when test="normalize-space(.) = ''"/>
+        <xsl:when test="parent::tei:front | parent::tei:text | parent::tei:back">h1</xsl:when>
+        <xsl:when test="$level &lt; 1">h1</xsl:when>
+        <xsl:when test="$level &gt; 7">h6</xsl:when>
+        <xsl:otherwise>h<xsl:value-of select="$level"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$name != ''">
+      <xsl:apply-templates select="tei:pb"/>
+      <xsl:element name="{$name}" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:call-template name="atts">
+          <xsl:with-param name="class"><xsl:value-of select="../@type"/></xsl:with-param>
+        </xsl:call-template>
+        <xsl:apply-templates select="node()[local-name()!='pb']"/>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- AUTEUR AVEC PLUSIEURS URI (2026-10-08) : <author ref="URI1 URI2 URI3">. La generique
+       met les trois URI dans un seul href (sur un span : rien n'est cliquable). On rend
+       le nom puis un lien par URI, libelle selon l'hote (Wikidata, BnF, IdRef). -->
+  <xsl:template match="tei:author[@ref]" priority="10">
+    <span class="author">
+      <xsl:apply-templates/>
+      <xsl:text> </xsl:text>
+      <span class="author-ids">
+        <xsl:text>(</xsl:text>
+        <xsl:for-each select="tokenize(normalize-space(@ref), ' ')">
+          <xsl:if test="position() &gt; 1"><xsl:text>, </xsl:text></xsl:if>
+          <a href="{.}">
+            <xsl:choose>
+              <xsl:when test="contains(., 'wikidata.org')">Wikidata</xsl:when>
+              <xsl:when test="contains(., 'data.bnf.fr') or contains(., 'catalogue.bnf.fr')">BnF</xsl:when>
+              <xsl:when test="contains(., 'idref.fr')">IdRef</xsl:when>
+              <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+            </xsl:choose>
+          </a>
+        </xsl:for-each>
+        <xsl:text>)</xsl:text>
+      </span>
+    </span>
   </xsl:template>
 
   <!-- Documentation : valeurs d'attribut (<val>), que hteiml ne connait pas. -->
