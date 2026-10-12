@@ -8,11 +8,6 @@
   <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
 
-  <!-- 2026-10-08 : page de garde generique (modele Montferrand), commune a tous les corpus.
-       Remplace la garde propre a ce corpus (teiHeader rendu en entier, corps masque).
-       Sauvegarde : dossier chantier/garde2, fichier arp_avant_garde_commun.xsl. -->
-  <xsl:include href="garde.xsl"/>
-
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
