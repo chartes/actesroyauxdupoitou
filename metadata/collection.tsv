@@ -1,2 +1,2 @@
-id	title	short_title	creator	publisher	issued	description
-actesroyauxdupoitou	Actes royaux du Poitou	Actes royaux du Poitou	Paul Guérin	École nationale des chartes	2011	Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France, publié par Paul Guérin en douze tomes (1302-1483), réunis en un seul document.
+id	title	short_title	creator	creator_wikidata_qid	creator_bnf_ark	creator_idref_ppn	publisher	issued	description
+actesroyauxdupoitou	Actes royaux du Poitou	Actes royaux du Poitou	Paul Guérin	https://www.wikidata.org/wiki/Q34639346	https://data.bnf.fr/fr/ark:/12148/cb12382835z	https://www.idref.fr/032885288	École nationale des chartes	2011	Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France, publié par Paul Guérin en douze tomes (1302-1483), réunis en un seul document.
