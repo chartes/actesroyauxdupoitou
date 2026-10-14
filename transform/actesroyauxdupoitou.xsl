@@ -19,14 +19,14 @@
        - blancs entre deux éléments gardés (Vue retire les blancs à saut de ligne) ;
        - auteurs et leurs identifiants (Wikidata, BnF, IdRef), valeurs de la documentation,
          page de l'édition imprimée où commence l'acte, liens vers l'ancien site. -->
+  <!-- ==== 0. DÉCLARATIONS : imports, sortie, paramètres, variables, clés, fonctions ==== -->
   <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
   <xsl:output indent="no"/>
-  <xsl:template match="*[local-name() = 'x']" priority="20">
-    <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
-  <xsl:template match="*[local-name() = 'x']" mode="a" priority="20">
-    <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
+
+  <!-- ==== 1. HISTORIQUE : surcharge reprise de la feuille de l'ÉLEC (rendu du texte de l'édition) ==== -->
+  <!-- (aucun) -->
+
+  <!-- ==== 2. BLOCS HTEIML GÉNÉRIQUES : enveloppe dts:wrapper, notes, apparat critique, bibliographie (listBibl) ==== -->
   <xsl:template name="footnotes"/>
   <xsl:template name="actes-note-n">
     <xsl:choose>
@@ -70,20 +70,6 @@
       <xsl:with-param name="notes" select="$notes"/>
     </xsl:call-template>
   </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/']" priority="14">
-    <a class="idno d5-local" href="/actesroyauxdupoitou"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:title[../tei:idno[@type = 'URI'][normalize-space(.) = 'http://elec.enc.sorbonne.fr' or normalize-space(.) = 'http://elec.enc.sorbonne.fr/']]" priority="14">
-    <a class="title d5-local" href="/"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:licence/@target">
-    <a class="licence" href="{.}">
-      <xsl:choose>
-        <xsl:when test="contains(., 'by-nc-nd/2.0/fr')">Licence Creative Commons BY-NC-ND 2.0 France</xsl:when>
-        <xsl:otherwise>Licence</xsl:otherwise>
-      </xsl:choose>
-    </a>
-  </xsl:template>
   <xsl:template match="tei:text[tei:group][parent::*[local-name() = 'wrapper']]" priority="25">
     <article class="text tome" id="{@xml:id}">
       <xsl:call-template name="arp-page-tome"/>
@@ -116,6 +102,22 @@
       [not(parent::tei:choice or parent::tei:app or parent::tei:subst or parent::tei:table or parent::tei:row
            or parent::tei:list or parent::tei:listBibl)]">
     <xsl:text> </xsl:text>
+  </xsl:template>
+
+  <!-- ==== 3. PROPRE AU PROJET ==== -->
+  <xsl:template match="*[local-name() = 'x']" priority="20">
+    <span class="x"><xsl:apply-templates/></span>
+  </xsl:template>
+  <xsl:template match="*[local-name() = 'x']" mode="a" priority="20">
+    <span class="x"><xsl:apply-templates/></span>
+  </xsl:template>
+  <xsl:template match="tei:licence/@target">
+    <a class="licence" href="{.}">
+      <xsl:choose>
+        <xsl:when test="contains(., 'by-nc-nd/2.0/fr')">Licence Creative Commons BY-NC-ND 2.0 France</xsl:when>
+        <xsl:otherwise>Licence</xsl:otherwise>
+      </xsl:choose>
+    </a>
   </xsl:template>
   <xsl:template match="tei:head[not(ancestor::tei:div)]" priority="3">
     <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
@@ -179,5 +181,13 @@
       <xsl:value-of select="@n"/>
       <xsl:text>}</xsl:text>
     </span>
+  </xsl:template>
+
+  <!-- ==== 4. MÉCANISMES COMMUNS : tableau filtrable (tf-*), liens vers l'ancien site (D5), liens internes entre fragments ==== -->
+  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/']" priority="14">
+    <a class="idno d5-local" href="/actesroyauxdupoitou"><xsl:apply-templates/></a>
+  </xsl:template>
+  <xsl:template match="tei:title[../tei:idno[@type = 'URI'][normalize-space(.) = 'http://elec.enc.sorbonne.fr' or normalize-space(.) = 'http://elec.enc.sorbonne.fr/']]" priority="14">
+    <a class="title d5-local" href="/"><xsl:apply-templates/></a>
   </xsl:template>
 </xsl:transform>
