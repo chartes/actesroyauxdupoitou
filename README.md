@@ -17,7 +17,7 @@ Le texte provient des 12 fichiers **TEI d'origine** du site Corpus de l'École d
 | Dossier | Contenu |
 |---|---|
 | `data/` | le document TEI unique `actesroyauxdupoitou.xml` (identifiant DoTS `royaux_poitou`), qui contient les 12 tomes |
-| `metadata/` | métadonnées pour DoTS : `collection.tsv` (collection racine), `dots_metadata_mapping.xml` (métadonnées du document, lues dans l'en-tête), `documents_metadata.tsv` (liste du document ; non lue par le mapping actuel) |
+| `metadata/` | métadonnées pour DoTS : `collection.tsv` (collection racine), `dots_metadata_mapping.xml` (métadonnées du document, lues dans l'en-tête) |
 | `transform/` | feuille XSL propre au corpus (`actesroyauxdupoitou.xsl`), qui surcharge la feuille commune `hteiml` |
 | `schema/` | schéma d'origine du projet (`actesroyauxdupoitou.rng`) ; il inclut `../../diple/schema/acte.rng`, absent de ce dépôt |
 | `provenance.json` | empreintes SHA-256 des 12 fichiers d'origine (2018), des 12 fichiers juste avant leur réunion et du document unique |
