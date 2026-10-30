@@ -32,7 +32,7 @@
     <xsl:choose>
       <xsl:when test="normalize-space(@n) != ''"><xsl:value-of select="@n"/></xsl:when>
       <xsl:otherwise>
-        <xsl:number count="tei:note[@type = 'footnote' or @type = 'a' or not(@type)]" level="any"
+        <xsl:number count="tei:note[@type = 'footnote' or not(@type)]" level="any"
           from="tei:text | tei:front/tei:div[@type = 'introduction']"/>
       </xsl:otherwise>
     </xsl:choose>
@@ -49,23 +49,50 @@
       </xsl:for-each>
     </section>
   </xsl:template>
-  <xsl:template match="tei:note[@type = 'footnote' or @type = 'a' or not(@type)]" priority="10">
+  <xsl:template match="tei:note[@type = 'footnote' or not(@type)]" priority="10">
     <xsl:variable name="n"><xsl:call-template name="actes-note-n"/></xsl:variable>
     <a class="noteref" id="fn-{generate-id()}-ref" href="#fn-{generate-id()}"
        title="{normalize-space(concat($n, ' ', .))}"><sup><xsl:value-of select="$n"/></sup></a>
   </xsl:template>
+  <!-- 2026-10-30 : notes de leçon (note type="a", 32 : « Mot omis », « Sic. ») en apparat, appelées par une lettre,
+       à part des notes historiques numérotées (comme dans les cartulaires et la CJC). -->
+  <xsl:template name="actes-app-l">
+    <xsl:number count="tei:note[@type = 'a']" level="any" from="tei:text | tei:front/tei:div[@type = 'introduction']" format="a"/>
+  </xsl:template>
+  <xsl:template match="tei:note[@type = 'a']" priority="10">
+    <xsl:variable name="l"><xsl:call-template name="actes-app-l"/></xsl:variable>
+    <a class="noteref app" id="app-{generate-id()}-ref" href="#app-{generate-id()}"
+       title="{normalize-space(concat($l, '. ', .))}"><sup><xsl:value-of select="$l"/></sup></a>
+  </xsl:template>
+  <xsl:template name="actes-apparat-pied">
+    <xsl:param name="apps"/>
+    <section class="footnotes apparatus">
+      <xsl:for-each select="$apps">
+        <aside class="note app" id="app-{generate-id()}">
+          <a class="noteback" href="#app-{generate-id()}-ref"><xsl:call-template name="actes-app-l"/><xsl:text>.</xsl:text></a>
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates/>
+        </aside>
+      </xsl:for-each>
+    </section>
+  </xsl:template>
   <xsl:template match="tei:group/tei:text | tei:front/tei:div[@type = 'introduction'] | tei:div[parent::*[local-name() = 'wrapper']] | tei:text[parent::*[local-name() = 'wrapper']]" priority="10">
     <xsl:apply-imports/>
-    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)]"/>
+    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or not(@type)]"/>
     <xsl:if test="$notes">
       <xsl:call-template name="actes-notes-pied">
         <xsl:with-param name="notes" select="$notes"/>
       </xsl:call-template>
     </xsl:if>
+    <xsl:if test=".//tei:note[@type = 'a']">
+      <xsl:call-template name="actes-apparat-pied">
+        <xsl:with-param name="apps" select=".//tei:note[@type = 'a']"/>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
-  <xsl:template match="*[local-name() = 'wrapper'][.//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]]" priority="11">
+  <xsl:template match="*[local-name() = 'wrapper'][.//tei:note[@type = 'footnote' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]]" priority="11">
     <xsl:apply-templates/>
-    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]"/>
+    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]"/>
     <xsl:call-template name="actes-notes-pied">
       <xsl:with-param name="notes" select="$notes"/>
     </xsl:call-template>
@@ -94,6 +121,9 @@
       <xsl:call-template name="atts"/>
       <xsl:apply-templates/>
       <xsl:apply-templates select=".//tei:witness[@ana='edited']" mode="according"/>
+      <xsl:if test="../tei:body//tei:seg[@function]">
+        <label class="arp-parties-choix"><input type="checkbox" class="arp-parties-cb"/> Montrer les parties de l’acte</label>
+      </xsl:if>
     </header>
   </xsl:template>
   <xsl:template match="text()[not(normalize-space())][contains(., '&#10;')]
@@ -105,6 +135,31 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
+  <!-- 2026-10-30 : parties du discours diplomatique (seg@function, 1 604). Infobulle toujours ; la case « Montrer les
+       parties de l'acte », dans l'en-tête de l'acte, les signale dans le texte (CSS : :has). -->
+  <xsl:template match="tei:seg[@function]" priority="20">
+    <xsl:variable name="f" select="string(@function)"/>
+    <xsl:variable name="nom">
+      <xsl:choose>
+        <xsl:when test="$f = 'intitulatio'">Suscription</xsl:when>
+        <xsl:when test="$f = 'address'">Adresse</xsl:when>
+        <xsl:when test="$f = 'salutatio'">Salut</xsl:when>
+        <xsl:when test="$f = 'preamble'">Préambule</xsl:when>
+        <xsl:when test="$f = 'notification'">Notification</xsl:when>
+        <xsl:when test="$f = 'narratio'">Exposé</xsl:when>
+        <xsl:when test="$f = 'dispositio'">Dispositif</xsl:when>
+        <xsl:when test="$f = 'verb'">Verbe dispositif</xsl:when>
+        <xsl:when test="$f = 'beneficiary'">Bénéficiaire</xsl:when>
+        <xsl:when test="$f = 'donatio'">Donation</xsl:when>
+        <xsl:when test="$f = 'clauses'">Clauses</xsl:when>
+        <xsl:when test="$f = 'corroboration'">Corroboration</xsl:when>
+        <xsl:when test="$f = 'dating'">Date</xsl:when>
+        <xsl:when test="$f = 'esn'">Mentions hors teneur</xsl:when>
+        <xsl:otherwise><xsl:value-of select="$f"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <span class="arp-partie arp-{$f}" data-partie="{$nom}" title="{$nom}"><xsl:apply-templates/></span>
+  </xsl:template>
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
