@@ -90,20 +90,8 @@
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
-  <xsl:template match="*[local-name() = 'wrapper'][.//tei:note[@type = 'footnote' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]]" priority="11">
-    <xsl:apply-templates/>
-    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or not(@type)][not(ancestor::tei:text)][not(ancestor::tei:div[parent::*[local-name() = 'wrapper']])][not(ancestor::tei:div[@type = 'introduction'][parent::tei:front])]"/>
-    <xsl:call-template name="actes-notes-pied">
-      <xsl:with-param name="notes" select="$notes"/>
-    </xsl:call-template>
-  </xsl:template>
   <xsl:template match="tei:text[tei:group][parent::*[local-name() = 'wrapper']]" priority="25">
     <article class="text tome" id="{@xml:id}">
-      <xsl:call-template name="arp-page-tome"/>
-    </article>
-  </xsl:template>
-  <xsl:template match="*[local-name() = 'wrapper'][tei:front][tei:group][not(tei:teiHeader)]" priority="25">
-    <article class="text tome">
       <xsl:call-template name="arp-page-tome"/>
     </article>
   </xsl:template>
@@ -161,9 +149,6 @@
     <span class="arp-partie arp-{$f}" data-partie="{$nom}" title="{$nom}"><xsl:apply-templates/></span>
   </xsl:template>
   <xsl:template match="*[local-name() = 'x']" priority="20">
-    <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
-  <xsl:template match="*[local-name() = 'x']" mode="a" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
   <xsl:template match="tei:licence/@target">
@@ -241,8 +226,5 @@
   <!-- ==== 4. MÉCANISMES COMMUNS : tableau filtrable (tf-*), liens vers l'ancien site (D5), liens internes entre fragments ==== -->
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/']" priority="14">
     <a class="idno d5-local" href="/actesroyauxdupoitou"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:title[../tei:idno[@type = 'URI'][normalize-space(.) = 'http://elec.enc.sorbonne.fr' or normalize-space(.) = 'http://elec.enc.sorbonne.fr/']]" priority="14">
-    <a class="title d5-local" href="/"><xsl:apply-templates/></a>
   </xsl:template>
 </xsl:transform>
