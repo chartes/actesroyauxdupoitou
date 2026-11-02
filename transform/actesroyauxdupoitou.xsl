@@ -39,7 +39,13 @@
   </xsl:template>
   <xsl:template name="actes-notes-pied">
     <xsl:param name="notes"/>
+    <xsl:param name="apps"/>
     <section class="footnotes">
+      <xsl:if test="$apps">
+        <xsl:call-template name="actes-apparat-pied">
+          <xsl:with-param name="apps" select="$apps"/>
+        </xsl:call-template>
+      </xsl:if>
       <xsl:for-each select="$notes">
         <aside class="note" id="fn-{generate-id()}">
           <a class="noteback" href="#fn-{generate-id()}-ref"><sup><xsl:call-template name="actes-note-n"/></sup></a>
@@ -55,7 +61,9 @@
        title="{normalize-space(concat($n, ' ', .))}"><sup><xsl:value-of select="$n"/></sup></a>
   </xsl:template>
   <!-- 2026-10-30 : notes de leçon (note type="a", 32 : « Mot omis », « Sic. ») en apparat, appelées par une lettre,
-       à part des notes historiques numérotées (comme dans les cartulaires et la CJC). -->
+       à part des notes historiques numérotées (comme dans les cartulaires et la CJC).
+       2026-11-02 : balisage de l'apparat de hteiml (p.apparatus > span.note), en tête du pied de notes, pour
+       recevoir le bloc CSS générique d'apparat comme les autres corpus. -->
   <xsl:template name="actes-app-l">
     <xsl:number count="tei:note[@type = 'a']" level="any" from="tei:text | tei:front/tei:div[@type = 'introduction']" format="a"/>
   </xsl:template>
@@ -66,27 +74,24 @@
   </xsl:template>
   <xsl:template name="actes-apparat-pied">
     <xsl:param name="apps"/>
-    <section class="footnotes apparatus">
+    <p class="apparatus">
       <xsl:for-each select="$apps">
-        <aside class="note app" id="app-{generate-id()}">
-          <a class="noteback" href="#app-{generate-id()}-ref"><xsl:call-template name="actes-app-l"/><xsl:text>.</xsl:text></a>
+        <span class="note" id="app-{generate-id()}">
+          <a href="#app-{generate-id()}-ref"><xsl:call-template name="actes-app-l"/></a>
           <xsl:text> </xsl:text>
           <xsl:apply-templates/>
-        </aside>
+        </span>
       </xsl:for-each>
-    </section>
+    </p>
   </xsl:template>
   <xsl:template match="tei:group/tei:text | tei:front/tei:div[@type = 'introduction'] | tei:div[parent::*[local-name() = 'wrapper']] | tei:text[parent::*[local-name() = 'wrapper']]" priority="10">
     <xsl:apply-imports/>
     <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or not(@type)]"/>
-    <xsl:if test="$notes">
+    <xsl:variable name="apps" select=".//tei:note[@type = 'a']"/>
+    <xsl:if test="$notes or $apps">
       <xsl:call-template name="actes-notes-pied">
         <xsl:with-param name="notes" select="$notes"/>
-      </xsl:call-template>
-    </xsl:if>
-    <xsl:if test=".//tei:note[@type = 'a']">
-      <xsl:call-template name="actes-apparat-pied">
-        <xsl:with-param name="apps" select=".//tei:note[@type = 'a']"/>
+        <xsl:with-param name="apps" select="$apps"/>
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
@@ -95,12 +100,9 @@
       <xsl:call-template name="arp-page-tome"/>
     </article>
   </xsl:template>
-  <xsl:template name="arp-page-tome">
-    <header class="front">
-      <xsl:apply-templates select="tei:front/tei:head"/>
-      <xsl:apply-templates select="tei:front/tei:div[@type = 'volume']"/>
-    </header>
-  </xsl:template>
+  <!-- 2026-11-02 (demande de Maxime) : la page d'un tome n'affiche plus rien d'elle-même, ni titre (déjà dans le fil
+       d'Ariane) ni notice du volume (div type="volume") : seul le sommaire de dots-vue. -->
+  <xsl:template name="arp-page-tome"/>
   <xsl:template match="*[local-name() = 'wrapper']" priority="10">
     <xsl:apply-templates/>
   </xsl:template>
@@ -109,9 +111,6 @@
       <xsl:call-template name="atts"/>
       <xsl:apply-templates/>
       <xsl:apply-templates select=".//tei:witness[@ana='edited']" mode="according"/>
-      <xsl:if test="../tei:body//tei:seg[@function]">
-        <label class="arp-parties-choix"><input type="checkbox" class="arp-parties-cb"/> Montrer les parties de l’acte</label>
-      </xsl:if>
     </header>
   </xsl:template>
   <xsl:template match="text()[not(normalize-space())][contains(., '&#10;')]
@@ -123,8 +122,10 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
-  <!-- 2026-10-30 : parties du discours diplomatique (seg@function, 1 604). Infobulle toujours ; la case « Montrer les
-       parties de l'acte », dans l'en-tête de l'acte, les signale dans le texte (CSS : :has). -->
+  <!-- 2026-10-30 : parties du discours diplomatique (seg@function, 1 604), nom en infobulle.
+       2026-11-02 : case « Montrer les parties de l'acte » retirée (demande de Maxime) ; chaque partie va à la ligne
+       comme un paragraphe (classe arp-bloc, CSS), sauf bénéficiaire, verbe et donation, qui sont des mots du dispositif ;
+       son nom (data-partie) est affiché au-dessus en intertitre gris, comme un h2 (CSS ::before). -->
   <xsl:template match="tei:seg[@function]" priority="20">
     <xsl:variable name="f" select="string(@function)"/>
     <xsl:variable name="nom">
@@ -146,18 +147,10 @@
         <xsl:otherwise><xsl:value-of select="$f"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <span class="arp-partie arp-{$f}" data-partie="{$nom}" title="{$nom}"><xsl:apply-templates/></span>
+    <span class="arp-partie arp-{$f}{if ($f = ('verb', 'beneficiary', 'donatio')) then '' else ' arp-bloc'}" data-partie="{$nom}" title="{$nom}"><xsl:apply-templates/></span>
   </xsl:template>
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
-  <xsl:template match="tei:licence/@target">
-    <a class="licence" href="{.}">
-      <xsl:choose>
-        <xsl:when test="contains(., 'by-nc-nd/2.0/fr')">Licence Creative Commons BY-NC-ND 2.0 France</xsl:when>
-        <xsl:otherwise>Licence</xsl:otherwise>
-      </xsl:choose>
-    </a>
   </xsl:template>
   <xsl:template match="tei:head[not(ancestor::tei:div)]" priority="3">
     <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
@@ -214,6 +207,12 @@
         <xsl:apply-imports><xsl:with-param name="level" select="$level"/></xsl:apply-imports>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  <!-- 2026-11-02 : dans les actes, <lb/> marque un alinéa de l'éditeur à l'intérieur d'un seul <p> (738 : début d'un
+       vidimus, « Item » d'une énumération, reprise après l'acte cité). hteiml en fait un <br>, sur lequel le navigateur
+       ignore toute marge : un span en bloc (CSS) coupe la ligne et met le blanc d'un paragraphe. -->
+  <xsl:template match="tei:text[parent::tei:group or parent::*[local-name() = 'wrapper']]//tei:lb" priority="10">
+    <span class="lb alinea"/>
   </xsl:template>
   <xsl:template match="tei:milestone[@unit = 'page'][@type = 'depart']">
     <span class="pb depart" title="Page de l'édition imprimée où commence l'acte">
