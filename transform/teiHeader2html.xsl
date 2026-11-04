@@ -20,9 +20,6 @@
   <xsl:variable name="th-label-editeurs">Édité par </xsl:variable>
   <xsl:variable name="th-editeurs" select="($th-ts/tei:principal, $th-ts/tei:editor, $th-ts/tei:author)[1]"/>
 
-  <!-- Édition électronique : les editor quand les éditeurs scientifiques sont des principal.
-       Les corpus qui la décrivent par des respStmt redéfinissent la variable. -->
-  <xsl:variable name="th-edition-electronique" select="$th-ts/tei:respStmt/(tei:persName | tei:name)"/>
 
   <!-- Date : l'année de publicationStmt/date. -->
   <xsl:variable name="th-date" select="normalize-space((//tei:fileDesc/tei:publicationStmt/tei:date)[1])"/>
@@ -58,10 +55,8 @@
         <xsl:with-param name="label" select="$th-label-editeurs"/>
         <xsl:with-param name="noms" select="$th-editeurs"/>
       </xsl:call-template>
-      <xsl:call-template name="th-ligne">
-        <xsl:with-param name="label">Édition électronique par </xsl:with-param>
-        <xsl:with-param name="noms" select="$th-edition-electronique"/>
-      </xsl:call-template>
+      <!-- 2026-11-04 : « Édition électronique par … » retiré (Maxime) : le pied de page le dit déjà
+           (« Édition électronique de Vincent Jolivet, Joana Casenave, Laura Gilli et Mathilde Henriquet »). -->
       <xsl:if test="$th-date != ''">
         <span class="date"><xsl:value-of select="$th-date"/></span>
       </xsl:if>

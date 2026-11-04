@@ -100,9 +100,15 @@
       <xsl:call-template name="arp-page-tome"/>
     </article>
   </xsl:template>
-  <!-- 2026-11-02 (demande de Maxime) : la page d'un tome n'affiche plus rien d'elle-même, ni titre (déjà dans le fil
-       d'Ariane) ni notice du volume (div type="volume") : seul le sommaire de dots-vue. -->
-  <xsl:template name="arp-page-tome"/>
+  <!-- 2026-11-02 (demande de Maxime) : la page d'un tome n'affiche plus rien d'elle-même, ni notice du volume
+       (div type="volume") : seul le sommaire de dots-vue.
+       2026-11-04 (Maxime) : le titre du tome revient en tête de la page, au-dessus du sommaire, avec le même
+       libellé que le sommaire (citeData de la citeStructure « tome » : « Tome I (1302-1333) »). -->
+  <xsl:template name="arp-page-tome">
+    <h1 class="head">
+      <xsl:value-of select="concat('Tome ', @n, ' (', (tei:front/tei:div[@type = 'volume']//tei:date[@from])[1], ')')"/>
+    </h1>
+  </xsl:template>
   <xsl:template match="*[local-name() = 'wrapper']" priority="10">
     <xsl:apply-templates/>
   </xsl:template>
