@@ -107,9 +107,6 @@
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
-  <xsl:template match="tei:val">
-    <code class="val"><xsl:apply-templates/></code>
-  </xsl:template>
   <xsl:template match="tei:div/tei:head" priority="2">
     <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
     <xsl:choose>
