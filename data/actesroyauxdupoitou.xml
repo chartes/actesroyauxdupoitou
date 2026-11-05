@@ -96,9 +96,6 @@
         <p>Ce fichier réunit les douze fichiers TEI du site Corpus de l'École nationale des chartes, un par tome, chacun issu d'une numérisation OCR par l'École des chartes d'un PDF Gallica (BnF).</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="partie" match="text/front/div[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="normalize-space(string-join((head)[1]//text()[not(ancestor::note)], ''))"/>
-        </citeStructure>
         <citeStructure unit="tome" match="text/group/text[@xml:id]" use="@xml:id">
           <citeData property="dct:title" use="concat('Tome ', @n, ' (', (front/div[@type='volume']//date[@from])[1], ')')"/>
           <citeStructure unit="introduction" match="front/div[@type='introduction']" use="@xml:id">
@@ -119,7 +116,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-05">Documentation du schéma de balisage du site Corpus retirée (div documentation). Notes : 575 renvois de page au recueil (« voy. p. 136, 166 », « cf. les p. 200, 317 », « vol. précédent, p. 244 », « notre tome IV, p. 244 ») en liens vers l'acte et la page, après ceux du 27 octobre 2026.</change>
+      <change when="2026-11-05">Présentation de la collection (front, div presentation) et documentation du schéma de balisage du site Corpus (div documentation) retirées, ainsi que la citeStructure « partie » qui les désignait ; la présentation passe dans la page « À propos » du site. Notes : 575 renvois de page au recueil (« voy. p. 136, 166 », « cf. les p. 200, 317 », « vol. précédent, p. 244 », « notre tome IV, p. 244 ») en liens vers l'acte et la page, après ceux du 27 octobre 2026.</change>
       <change when="2026-10-05">Cinq mots collés à un point : une espace ajoutée (« salvo. Quod », « la. Bouteilliere », « rex. Notum », « etc. Sauf », « Guillaume. Chuffoulon »).</change>
       <change when="2026-10-04">Documentation : liens du Vocabulaire international de la diplomatique transposés vers son adresse actuelle (http://www.cei.lmu.de/VID/VID.php?N → https://www.cei.lmu.de/VID/?N, intitulés vérifiés) ; ?196 (préambule), ?345 (esn) et #7 laissés : la page visée ne correspond plus ou n'est pas confirmée.</change>
       <change when="2026-10-04">listBibl : @source des volumes imprimés numérisés (Gallica pour le t. I, Internet Archive pour les t. I, III à VI, VIII, IX, XI et XII ; adresses vérifiées en ligne) ; t. II, VII et X sans numérisation trouvée, sans @source.</change>
@@ -141,16 +138,6 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
-      <div type="presentation" xml:id="presentation">
-        <head>La collection</head>
-        <p>Les <title>Actes royaux du Poitou</title> réunissent les douze tomes du <title>Recueil des documents concernant le Poitou contenus dans les registres de la Chancellerie de France</title>, publiés par Paul Guérin de 1881 à 1919 dans les <title>Archives historiques du Poitou</title>. Ils couvrent les années 1302 à 1483 et comptent 1 746 actes.</p>
-        <p>La version historique, sur le site Corpus de l'École nationale des chartes, donnait accès à chaque tome depuis une page unique et proposait également une documentation et le téléchargement des sources.</p>
-        <p>Les douze tomes sont ici réunis en un seul document. Chaque tome en est une partie ; ses actes, ainsi que les introductions des tomes I, VI et X, sont les unités de consultation et de citation, ce qui donne à chaque texte un lien pérenne.</p>
-        <p>Le texte provient d'une numérisation par OCR des volumes de Gallica (BnF) et n'a pas été relu : il garde des fautes de lecture.</p>
-        <p>La publication historique indique le soutien du Consortium Sources médiévales (COSME), labellisé par la TGIR Huma-Num.</p>
-      </div>
-    </front>
     <group>
     <text xml:id="tome1" n="I">
     <front>
