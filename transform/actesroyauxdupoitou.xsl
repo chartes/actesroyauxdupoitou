@@ -104,6 +104,14 @@
   <!-- ==== 3. PROPRE AU PROJET ==== -->
   <!-- 2026-11-05 (Maxime) : parties du discours diplomatique (seg@function, 1 604) plus affichées ; hteiml rend
        le seg sans balise (texte suivi). -->
+  <!-- 2026-11-05 : renvois des notes au recueil (1 044), encodés sans adresse d'application :
+       <ref type="renvoi" target="#tome6_0780" n="136">. L'xml:id de l'acte est son refId (citeStructure use="@xml:id"),
+       n la page imprimée, dont hteiml fait l'ancre #pbN : l'adresse dots-vue se compose sans chercher la cible. -->
+  <xsl:template match="tei:ref[@type = 'renvoi'][starts-with(@target, '#')]" priority="10">
+    <a class="renvoi" href="?refId={substring(@target, 2)}{if (normalize-space(@n)) then concat('#pb', normalize-space(@n)) else ''}">
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
   </xsl:template>
