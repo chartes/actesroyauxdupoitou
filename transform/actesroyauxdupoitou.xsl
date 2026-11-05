@@ -26,10 +26,16 @@
   <!-- ==== 1. HISTORIQUE : surcharge reprise de la feuille de l'ÉLEC (rendu du texte de l'édition) ==== -->
   <!-- (aucun) -->
 
-  <!-- ==== 2. BLOCS HTEIML GÉNÉRIQUES : enveloppe dts:wrapper, notes, apparat critique, bibliographie (listBibl) ==== -->
+  <!-- ==== 2. BLOCS HTEIML GÉNÉRIQUES : enveloppe dts:wrapper, notes ==== -->
   <xsl:template name="footnotes"/>
+  <!-- 2026-11-05 (Maxime : « a b c d = notes, on met pas d'apparat critique sur actes royaux ») : les notes de leçon
+       (note type="a", 32 : « Mot omis », « Sic. ») sont des notes comme les autres, dans la même suite au pied de l'acte,
+       appelées par leur lettre. Numéros des autres notes : @n de l'édition imprimée (20, 21…), sinon 1 à n par acte. -->
   <xsl:template name="actes-note-n">
     <xsl:choose>
+      <xsl:when test="@type = 'a'">
+        <xsl:number count="tei:note[@type = 'a']" level="any" from="tei:text | tei:front/tei:div[@type = 'introduction']" format="a"/>
+      </xsl:when>
       <xsl:when test="normalize-space(@n) != ''"><xsl:value-of select="@n"/></xsl:when>
       <xsl:otherwise>
         <xsl:number count="tei:note[@type = 'footnote' or not(@type)]" level="any"
@@ -39,13 +45,7 @@
   </xsl:template>
   <xsl:template name="actes-notes-pied">
     <xsl:param name="notes"/>
-    <xsl:param name="apps"/>
     <section class="footnotes">
-      <xsl:if test="$apps">
-        <xsl:call-template name="actes-apparat-pied">
-          <xsl:with-param name="apps" select="$apps"/>
-        </xsl:call-template>
-      </xsl:if>
       <xsl:for-each select="$notes">
         <aside class="note" id="fn-{generate-id()}">
           <a class="noteback" href="#fn-{generate-id()}-ref"><sup><xsl:call-template name="actes-note-n"/></sup></a>
@@ -55,43 +55,17 @@
       </xsl:for-each>
     </section>
   </xsl:template>
-  <xsl:template match="tei:note[@type = 'footnote' or not(@type)]" priority="10">
+  <xsl:template match="tei:note[@type = 'footnote' or @type = 'a' or not(@type)]" priority="10">
     <xsl:variable name="n"><xsl:call-template name="actes-note-n"/></xsl:variable>
     <a class="noteref" id="fn-{generate-id()}-ref" href="#fn-{generate-id()}"
        title="{normalize-space(concat($n, ' ', .))}"><sup><xsl:value-of select="$n"/></sup></a>
   </xsl:template>
-  <!-- 2026-10-30 : notes de leçon (note type="a", 32 : « Mot omis », « Sic. ») en apparat, appelées par une lettre,
-       à part des notes historiques numérotées (comme dans les cartulaires et la CJC).
-       2026-11-02 : balisage de l'apparat de hteiml (p.apparatus > span.note), en tête du pied de notes, pour
-       recevoir le bloc CSS générique d'apparat comme les autres corpus. -->
-  <xsl:template name="actes-app-l">
-    <xsl:number count="tei:note[@type = 'a']" level="any" from="tei:text | tei:front/tei:div[@type = 'introduction']" format="a"/>
-  </xsl:template>
-  <xsl:template match="tei:note[@type = 'a']" priority="10">
-    <xsl:variable name="l"><xsl:call-template name="actes-app-l"/></xsl:variable>
-    <a class="noteref app" id="app-{generate-id()}-ref" href="#app-{generate-id()}"
-       title="{normalize-space(concat($l, '. ', .))}"><sup><xsl:value-of select="$l"/></sup></a>
-  </xsl:template>
-  <xsl:template name="actes-apparat-pied">
-    <xsl:param name="apps"/>
-    <p class="apparatus">
-      <xsl:for-each select="$apps">
-        <span class="note" id="app-{generate-id()}">
-          <a href="#app-{generate-id()}-ref"><xsl:call-template name="actes-app-l"/></a>
-          <xsl:text> </xsl:text>
-          <xsl:apply-templates/>
-        </span>
-      </xsl:for-each>
-    </p>
-  </xsl:template>
   <xsl:template match="tei:group/tei:text | tei:front/tei:div[@type = 'introduction'] | tei:div[parent::*[local-name() = 'wrapper']] | tei:text[parent::*[local-name() = 'wrapper']]" priority="10">
     <xsl:apply-imports/>
-    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or not(@type)]"/>
-    <xsl:variable name="apps" select=".//tei:note[@type = 'a']"/>
-    <xsl:if test="$notes or $apps">
+    <xsl:variable name="notes" select=".//tei:note[@type = 'footnote' or @type = 'a' or not(@type)]"/>
+    <xsl:if test="$notes">
       <xsl:call-template name="actes-notes-pied">
         <xsl:with-param name="notes" select="$notes"/>
-        <xsl:with-param name="apps" select="$apps"/>
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
@@ -128,77 +102,10 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
-  <!-- 2026-10-30 : parties du discours diplomatique (seg@function, 1 604), nom en infobulle.
-       2026-11-02 : case « Montrer les parties de l'acte » retirée (demande de Maxime) ; chaque partie va à la ligne
-       comme un paragraphe (classe arp-bloc, CSS), sauf bénéficiaire, verbe et donation, qui sont des mots du dispositif ;
-       son nom (data-partie) est affiché au-dessus en intertitre gris, comme un h2 (CSS ::before). -->
-  <xsl:template match="tei:seg[@function]" priority="20">
-    <xsl:variable name="f" select="string(@function)"/>
-    <xsl:variable name="nom">
-      <xsl:choose>
-        <xsl:when test="$f = 'intitulatio'">Suscription</xsl:when>
-        <xsl:when test="$f = 'address'">Adresse</xsl:when>
-        <xsl:when test="$f = 'salutatio'">Salut</xsl:when>
-        <xsl:when test="$f = 'preamble'">Préambule</xsl:when>
-        <xsl:when test="$f = 'notification'">Notification</xsl:when>
-        <xsl:when test="$f = 'narratio'">Exposé</xsl:when>
-        <xsl:when test="$f = 'dispositio'">Dispositif</xsl:when>
-        <xsl:when test="$f = 'verb'">Verbe dispositif</xsl:when>
-        <xsl:when test="$f = 'beneficiary'">Bénéficiaire</xsl:when>
-        <xsl:when test="$f = 'donatio'">Donation</xsl:when>
-        <xsl:when test="$f = 'clauses'">Clauses</xsl:when>
-        <xsl:when test="$f = 'corroboration'">Corroboration</xsl:when>
-        <xsl:when test="$f = 'dating'">Date</xsl:when>
-        <xsl:when test="$f = 'esn'">Mentions hors teneur</xsl:when>
-        <xsl:otherwise><xsl:value-of select="$f"/></xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <span class="arp-partie arp-{$f}{if ($f = ('verb', 'beneficiary', 'donatio')) then '' else ' arp-bloc'}" data-partie="{$nom}" title="{$nom}"><xsl:apply-templates/></span>
-  </xsl:template>
+  <!-- 2026-11-05 (Maxime) : parties du discours diplomatique (seg@function, 1 604) plus affichées ; hteiml rend
+       le seg sans balise (texte suivi). -->
   <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>
-  <xsl:template match="tei:head[not(ancestor::tei:div)]" priority="3">
-    <xsl:param name="level" select="count(ancestor::tei:*) - 2"/>
-    <xsl:variable name="name">
-      <xsl:choose>
-        <xsl:when test="normalize-space(.) = ''"/>
-        <xsl:when test="parent::tei:front | parent::tei:text | parent::tei:back">h1</xsl:when>
-        <xsl:when test="$level &lt; 1">h1</xsl:when>
-        <xsl:when test="$level &gt; 7">h6</xsl:when>
-        <xsl:otherwise>h<xsl:value-of select="$level"/></xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:if test="$name != ''">
-      <xsl:apply-templates select="tei:pb"/>
-      <xsl:element name="{$name}" namespace="http://www.w3.org/1999/xhtml">
-        <xsl:call-template name="atts">
-          <xsl:with-param name="class"><xsl:value-of select="../@type"/></xsl:with-param>
-        </xsl:call-template>
-        <xsl:apply-templates select="node()[local-name()!='pb']"/>
-      </xsl:element>
-    </xsl:if>
-  </xsl:template>
-  <xsl:template match="tei:author[@ref]" priority="10">
-    <span class="author">
-      <xsl:apply-templates/>
-      <xsl:text> </xsl:text>
-      <span class="author-ids">
-        <xsl:text>(</xsl:text>
-        <xsl:for-each select="tokenize(normalize-space(@ref), ' ')">
-          <xsl:if test="position() &gt; 1"><xsl:text>, </xsl:text></xsl:if>
-          <a href="{.}">
-            <xsl:choose>
-              <xsl:when test="contains(., 'wikidata.org')">Wikidata</xsl:when>
-              <xsl:when test="contains(., 'data.bnf.fr') or contains(., 'catalogue.bnf.fr')">BnF</xsl:when>
-              <xsl:when test="contains(., 'idref.fr')">IdRef</xsl:when>
-              <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
-            </xsl:choose>
-          </a>
-        </xsl:for-each>
-        <xsl:text>)</xsl:text>
-      </span>
-    </span>
   </xsl:template>
   <xsl:template match="tei:val">
     <code class="val"><xsl:apply-templates/></code>
@@ -228,8 +135,4 @@
     </span>
   </xsl:template>
 
-  <!-- ==== 4. MÉCANISMES COMMUNS : tableau filtrable (tf-*), liens vers l'ancien site (D5), liens internes entre fragments ==== -->
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/actesroyauxdupoitou/']" priority="14">
-    <a class="idno d5-local" href="/actesroyauxdupoitou"><xsl:apply-templates/></a>
-  </xsl:template>
 </xsl:transform>
