@@ -18,7 +18,7 @@
   </xsl:template>
   
   <xsl:template match="tei:milestone[@unit = 'page'][@type = 'depart']">
-    <a id="{concat(@unit, @n)}" href="{concat(@unit, @n)}" class="pb">
+    <a id="{concat(@unit, @n)}" href="#{concat(@unit, @n)}" class="pb">
       <xsl:text>{p. </xsl:text>
       <xsl:value-of select="@n"/>
       <xsl:text>}</xsl:text>
@@ -38,13 +38,47 @@
   </xsl:template>
   
   <xsl:template match="tei:ref[@type = 'renvoi'][starts-with(@target, '#')]" priority="10">
-    <a class="renvoi" href="?refId={substring(@target, 2)}{if (normalize-space(@n)) then concat('#pb', normalize-space(@n)) else ''}">
+    <a class="renvoi" href="{if (contains(@target, '_')) then substring-before(substring(@target, 2), '_') else substring(@target, 2)}?refId={substring(@target, 2)}{if (normalize-space(@n)) then concat('#pb', normalize-space(@n)) else ''}">
       <xsl:apply-templates/>
     </a>
   </xsl:template>
-  <!--<xsl:template match="*[local-name() = 'x']" priority="20">
+  <xsl:template match="*[local-name() = 'x']" priority="20">
     <span class="x"><xsl:apply-templates/></span>
-  </xsl:template>-->
+  </xsl:template>
+
+  <!-- 2026-11-06 (réunion avec Philippe) : notes numérotées par texte, à la position, sans compter les note type="a"
+       (le tome 1 est numéroté de 1 à n dans le TEI, @n) ; note type="a" (« Mot omis », « Sic. », tome 6) en apparat
+       critique : leur lettre, par texte, est dans le TEI (@n). -->
+  <xsl:template name="note-n">
+    <xsl:choose>
+      <xsl:when test="@n"><xsl:value-of select="@n"/></xsl:when>
+      <xsl:otherwise>
+        <xsl:number count="tei:note[not(@type = 'a')]" level="any"
+          from="tei:text | tei:front/tei:div[@type = 'introduction']"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="tei:text[not(tei:group)]/tei:body">
+    <xsl:apply-imports/>
+    <xsl:variable name="apparat" select="..//tei:note[@type = 'a']"/>
+    <xsl:if test="$apparat">
+      <p class="apparatus">
+        <xsl:for-each select="$apparat">
+          <xsl:call-template name="note-inline"/>
+        </xsl:for-each>
+      </p>
+    </xsl:if>
+  </xsl:template>
+  <!-- modèle « note » de hteiml, sans les note type="a" : elles sont dans l'apparat, pas dans le pied de notes -->
+  <xsl:template name="note">
+    <xsl:if test="not(@type = 'a')">
+      <aside class="{normalize-space(concat(@type, ' note'))}">
+        <xsl:attribute name="id"><xsl:call-template name="id"/></xsl:attribute>
+        <xsl:call-template name="noteback"/>
+        <xsl:apply-templates/>
+      </aside>
+    </xsl:if>
+  </xsl:template>
   
  <!--<xsl:template name="footnotes"/>-->
   <!-- 2026-11-05 (Maxime : « a b c d = notes, on met pas d'apparat critique sur actes royaux ») : les notes de leçon
