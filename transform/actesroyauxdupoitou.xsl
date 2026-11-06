@@ -58,25 +58,52 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  <xsl:template match="tei:text[not(tei:group)]/tei:body">
-    <xsl:apply-imports/>
-    <xsl:variable name="apparat" select="..//tei:note[@type = 'a']"/>
-    <xsl:if test="$apparat">
-      <p class="apparatus">
-        <xsl:for-each select="$apparat">
-          <xsl:call-template name="note-inline"/>
-        </xsl:for-each>
-      </p>
-    </xsl:if>
-  </xsl:template>
-  <!-- modèle « note » de hteiml, sans les note type="a" : elles sont dans l'apparat, pas dans le pied de notes -->
-  <xsl:template name="note">
-    <xsl:if test="not(@type = 'a')">
-      <aside class="{normalize-space(concat(@type, ' note'))}">
-        <xsl:attribute name="id"><xsl:call-template name="id"/></xsl:attribute>
-        <xsl:call-template name="noteback"/>
-        <xsl:apply-templates/>
-      </aside>
+  <!-- Pied de notes de hteiml (notes par page), avec en tête le bloc d'apparat des note type="a" : hteiml n'y met que
+       les tei:app. Même rendu que l'apparat des Édits. -->
+  <xsl:template name="footnotes">
+    <xsl:param name="cont" select="*"/>
+    <xsl:param name="pb" select="$cont//tei:pb[@n][not(@ed)]"/>
+    <xsl:variable name="apparat" select="$cont//tei:note[@type = 'a']"/>
+    <xsl:variable name="notes">
+      <xsl:if test="$apparat">
+        <p class="apparatus">
+          <xsl:for-each select="$apparat">
+            <span class="note">
+              <xsl:attribute name="id"><xsl:call-template name="id"/></xsl:attribute>
+              <xsl:call-template name="noteback">
+                <xsl:with-param name="class"/>
+              </xsl:call-template>
+              <xsl:text>&#160;</xsl:text>
+              <xsl:apply-templates/>
+            </span>
+          </xsl:for-each>
+        </p>
+      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="$pb">
+          <xsl:variable name="avant" select="key('note-pb', '')[not(@type = 'a')]"/>
+          <xsl:if test="$avant">
+            <div class="page">
+              <xsl:for-each select="$avant"><xsl:call-template name="note"/></xsl:for-each>
+            </div>
+          </xsl:if>
+          <xsl:for-each select="$pb">
+            <xsl:variable name="page" select="key('note-pb', generate-id())[not(@type = 'a')]"/>
+            <xsl:if test="$page">
+              <div class="page">
+                <div class="b note-page"><xsl:call-template name="a"/></div>
+                <xsl:for-each select="$page"><xsl:call-template name="note"/></xsl:for-each>
+              </div>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:for-each select="$cont//tei:note[not(@type = 'a')]"><xsl:call-template name="note"/></xsl:for-each>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$notes != ''">
+      <section class="footnotes"><xsl:copy-of select="$notes"/></section>
     </xsl:if>
   </xsl:template>
   
